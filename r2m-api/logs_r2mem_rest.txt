@@ -1,0 +1,38 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+[1/7] conv-42 elapsed=135s
+[2/7] conv-43 elapsed=493s
+[3/7] conv-44 elapsed=558s
+[4/7] conv-47 elapsed=855s
+[5/7] conv-48 elapsed=1101s[[6/7] conv-49 elapsed=1276s[[7/7] conv-50 elapsed=1469s
+dataset=locomo  method=r2mem  model=gpt-4o-mini
+samples=7  questions=1155  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/r2mem-locomo-4omini
+experience bank: 275 entries {"total": 275, "Planning/good": 68, "Reflection/good": 114, "Planning/bad": 18, "Reflection/bad": 75}
+
+=== metrics ===
+{
+  "multi_hop": {
+    "n": 208,
+    "f1": 41.428739969845694,
+    "bleu1": 33.0346658260473
+  },
+  "temporal": {
+    "n": 231,
+    "f1": 54.51692522739125,
+    "bleu1": 48.71823303711716
+  },
+  "open_domain": {
+    "n": 75,
+    "f1": 31.52361306794591,
+    "bleu1": 25.93487167810619
+  },
+  "single_hop": {
+    "n": 641,
+    "f1": 58.020146146136646,
+    "bleu1": 51.866959952735485
+  }
+}
+overall: {"n": 1155, "f1": 52.61105826928551, "bleu1": 46.1618692891371}
+live tokens billed this run: 19,939,818
+summary -> /Users/xinyu.li/Documents/research1/r2m-api/results/r2mem-locomo-4omini/summary.json
+n

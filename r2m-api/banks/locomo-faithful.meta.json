@@ -1,0 +1,43 @@
+{
+  "run": "gam-locomo-4omini",
+  "source": [
+    "conv-26"
+  ],
+  "evaluator_model": "gpt-4o",
+  "learner_model": "gpt-4o-mini",
+  "k_low": 5,
+  "k_high": 10,
+  "keep_middle": false,
+  "bank_stats": {
+    "total": 275,
+    "Planning/good": 68,
+    "Reflection/good": 114,
+    "Planning/bad": 18,
+    "Reflection/bad": 75
+  },
+  "build_stats": {
+    "n_traces": 152,
+    "n_steps_scored": 470,
+    "n_good": 182,
+    "n_bad": 93,
+    "n_middle_skipped": 195,
+    "evaluator_tokens": 322386,
+    "learner_tokens": 274002,
+    "score_hist": {
+      "12": 148,
+      "8": 69,
+      "7": 28,
+      "4": 31,
+      "5": 52,
+      "6": 70,
+      "9": 28,
+      "0": 2,
+      "11": 13,
+      "10": 21,
+      "3": 7,
+      "1": 1
+    },
+    "errors": []
+  },
+  "wall_secs": 1039.1
+}

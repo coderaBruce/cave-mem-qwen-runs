@@ -1,0 +1,29 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+  [10/240] elapsed=3s
+  [20/240] elapsed=3s
+  [30/240] elapsed=5s
+  [40/240] elapsed=6s
+  [50/240] elapsed=8s
+  [60/240] elapsed=9s
+  [70/240] elapsed=11s
+  [80/240] elapsed=12s
+  [90/240] elapsed=14s
+  [100/240] elapsed=15s
+  [110/240] elapsed=16s
+  [120/240] elapsed=17s
+  [130/240] elapsed=18s
+  [140/240] elapsed=19s
+  [150/240] elapsed=20s
+  [160/240] elapsed=22s
+  [170/240] elapsed=24s
+  [180/240] elapsed=26s
+  [190/240] elapsed=28s
+  [200/240] elapsed=30s
+  [210/240] elapsed=31s
+  [220/240] elapsed=34s
+  [230/240] elapsed=36s
+  [240/240] elapsed=54s
+dataset=narrativeqa  method=gam  model=gpt-4o-mini
+samples=240  questions=240  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/ours-nqa300
+answer-style shots per category: {}

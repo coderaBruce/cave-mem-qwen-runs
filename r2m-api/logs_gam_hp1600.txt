@@ -1,0 +1,23 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+  [10/128] elapsed=293s
+  [20/128] elapsed=537s
+  [30/128] elapsed=617s
+  [40/128] elapsed=875s
+  [50/128] elapsed=1141s
+  [60/128] elapsed=1304s
+  [70/128] elapsed=1610s
+  [80/128] elapsed=1787s
+  [90/128] elapsed=2016s
+  [100/128] elapsed=2289s
+  [110/128] elapsed=2388s
+  [120/128] elapsed=2670s
+  [128/128] elapsed=2882s
+dataset=hotpotqa-eval_1600  method=gam  model=gpt-4o-mini
+samples=128  questions=128  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/gam-hotpot1600
+reflection tokens: 601
+当前sum_tokens: 41506
+============================== reflection response ==============================
+{'text': '\n\n{\n  "enough": true\n}', 'json': {'enough': True}, 'response': {'id': 'chatcmpl-E66dTpoQkvlJ53KcVxpudh76wOeDi', 'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None, 'message': {'content': '<think> \nThe REQUEST asks for information about who formed the South Korean boy group associated with the album "2014 S/S." The key pieces of information required are: \n1. The name of the boy group (which is provided as Winner in the RESULT).\n2. The entity responsible for forming the group (which is YG Entertainment, also provided in the RESULT).\n\nThe RESULT contains both pieces of information clearly and specifically, indicating that Winner was formed by YG Entertainment. Therefore, all necessary details to answer the REQUEST are present in the RESULT. \n</think>\n\n{\n  "enough": true\n}', 'refusal': None, 'role': 'assistant', 'annotations': [], 'audio': None, 'function_call': None, 'tool_calls': None}}], 'created': 1785124183, 'model': 'gpt-4o-mini-2024-07-18', 'object': 'chat.completion', 'moderation': None, 'service_tier': 'default', 'system_fingerprint': 'fp_f48f1594a2', 'usage': {'completion_tokens': 125, 'prompt_tokens': 476, 'total_tokens': 601, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cache_write_tokens': None, 'cached_tokens': 0}}}}
+
+

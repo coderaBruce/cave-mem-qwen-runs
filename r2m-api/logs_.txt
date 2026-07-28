@@ -1,0 +1,14 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+usage: run.py [-h] --dataset {hotpotqa,locomo,narrativeqa} [--split SPLIT]
+              [--method {gam,r2mem,additive}] [--bank BANK] [--top-k TOP_K]
+              [--evidence-pages EVIDENCE_PAGES]
+              [--evidence-chars EVIDENCE_CHARS] [--answer-shots ANSWER_SHOTS]
+              [--shots-run SHOTS_RUN] [--shots-samples [SHOTS_SAMPLES ...]]
+              [--max-iters MAX_ITERS] [--min-sim MIN_SIM] [--model MODEL]
+              [--embed-model EMBED_MODEL] [--temperature TEMPERATURE]
+              [--max-tokens MAX_TOKENS] [--limit-samples LIMIT_SAMPLES]
+              [--only [ONLY ...]] [--limit-questions LIMIT_QUESTIONS]
+              [--seed SEED] [--tag TAG] [--workers WORKERS] [--rebuild]
+              [--no-cache] [--dry-run]
+run.py: error: argument --evidence-pages: invalid int value: '4 0 ev4c2400'

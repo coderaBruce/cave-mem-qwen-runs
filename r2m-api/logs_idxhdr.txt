@@ -1,0 +1,40 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+[1/9] conv-30 elapsed=3s
+[2/9] conv-41 elapsed=8s
+[3/9] conv-42 elapsed=15s
+[4/9] conv-43 elapsed=21s
+[5/9] conv-44 elapsed=25s
+[6/9] conv-47 elapsed=29s
+[7/9] conv-48 elapsed=108s
+[8/9] conv-49 elapsed=284s
+[9/9] conv-50 elapsed=516s
+dataset=locomo  method=gam  model=gpt-4o-mini
+samples=9  questions=1388  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/ours-idxhdr
+
+=== metrics ===
+{
+  "multi_hop": {
+    "n": 250,
+    "f1": 44.741410408968115,
+    "bleu1": 35.7836199221738
+  },
+  "temporal": {
+    "n": 284,
+    "f1": 60.43708178960877,
+    "bleu1": 54.26729212235258
+  },
+  "open_domain": {
+    "n": 83,
+    "f1": 33.30336745244954,
+    "bleu1": 28.348197289627056
+  },
+  "single_hop": {
+    "n": 771,
+    "f1": 56.5055443439683,
+    "bleu1": 50.873670509255106
+  }
+}
+overall: {"n": 1388, "f1": 53.80362969614095, "bleu1": 47.50310971251181}
+live tokens billed this run: 7,277,940
+summary -> /Users/xinyu.li/Documents/research1/r2m-api/results/ours-idxhdr/summary.json

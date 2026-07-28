@@ -1,0 +1,33 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+[1/2] conv-30 elapsed=45s
+[2/2] conv-41 elapsed=132s
+dataset=locomo  method=rrf  model=gpt-4o-mini
+samples=2  questions=233  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/ours-rrf3
+
+=== metrics ===
+{
+  "multi_hop": {
+    "n": 42,
+    "f1": 52.251685261860075,
+    "bleu1": 43.75873726632084
+  },
+  "temporal": {
+    "n": 53,
+    "f1": 70.54507337526206,
+    "bleu1": 64.62186814188853
+  },
+  "open_domain": {
+    "n": 8,
+    "f1": 32.51225490196079,
+    "bleu1": 24.337384872327796
+  },
+  "single_hop": {
+    "n": 130,
+    "f1": 54.681131369996194,
+    "bleu1": 49.20374240142148
+  }
+}
+overall: {"n": 233, "f1": 57.09057848584639, "bleu1": 50.87558612819306}
+live tokens billed this run: 2,299,096
+summary -> /Users/xinyu.li/Documents/research1/r2m-api/results/ours-rrf3/summary.json

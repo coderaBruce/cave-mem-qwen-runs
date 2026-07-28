@@ -1,0 +1,36 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+[1/2] conv-30 ...
+  pages=19 q=81 errors=0 iters=1.28 elapsed=90s
+[2/2] conv-41 ...
+  pages=32 q=152 errors=0 iters=1.37 elapsed=256s
+dataset=locomo  method=r2mem  model=gpt-4o-mini
+samples=2  questions=233  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/r2mem-reflonly
+experience bank: 189 entries {"total": 189, "Reflection/good": 114, "Reflection/bad": 75}
+
+=== metrics ===
+{
+  "multi_hop": {
+    "n": 42,
+    "f1": 51.20173508725533,
+    "bleu1": 42.6683247342618
+  },
+  "temporal": {
+    "n": 53,
+    "f1": 67.52620545073374,
+    "bleu1": 60.75797170192751
+  },
+  "open_domain": {
+    "n": 8,
+    "f1": 39.37088274044795,
+    "bleu1": 33.48484112624687
+  },
+  "single_hop": {
+    "n": 130,
+    "f1": 51.52389871960006,
+    "bleu1": 45.748871376725354
+  }
+}
+overall: {"n": 233, "f1": 54.688565055902195, "bleu1": 48.18658432199753}
+live tokens billed this run: 3,827,159
+summary -> /Users/xinyu.li/Documents/research1/r2m-api/results/r2mem-reflonly/summary.json

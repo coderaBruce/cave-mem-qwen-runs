@@ -1,0 +1,49 @@
+[
+  {
+    "corpus": "locomo",
+    "n": 120,
+    "probe_dist": {
+      "WORDING": 9,
+      "MISSING_EVIDENCE": 111
+    },
+    "best_fixed": 52.99,
+    "best_fixed_strategy": "answer_style",
+    "probe_only": 49.42,
+    "probe_plus_features": 52.7,
+    "oracle": 58.94,
+    "probe_minus_fixed": -3.57,
+    "probe_label_acc": 0.125,
+    "majority_rate": 0.683
+  },
+  {
+    "corpus": "hotpotqa",
+    "n": 24,
+    "probe_dist": {
+      "MISSING_EVIDENCE": 24
+    },
+    "best_fixed": 77.18,
+    "best_fixed_strategy": "answer_style",
+    "probe_only": 70.6,
+    "probe_plus_features": 77.18,
+    "oracle": 79.7,
+    "probe_minus_fixed": -6.59,
+    "probe_label_acc": 0.042,
+    "majority_rate": 0.792
+  },
+  {
+    "corpus": "narrativeqa",
+    "n": 58,
+    "probe_dist": {
+      "MISSING_EVIDENCE": 56,
+      "WORDING": 2
+    },
+    "best_fixed": 36.78,
+    "best_fixed_strategy": "answer_style",
+    "probe_only": 33.27,
+    "probe_plus_features": 36.78,
+    "oracle": 41.74,
+    "probe_minus_fixed": -3.51,
+    "probe_label_acc": 0.207,
+    "majority_rate": 0.5
+  }
+]

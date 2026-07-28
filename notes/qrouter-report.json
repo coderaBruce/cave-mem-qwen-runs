@@ -1,0 +1,81 @@
+{
+  "per_corpus": [
+    {
+      "corpus": "locomo",
+      "n": 120,
+      "label_dist": {
+        "base": 82,
+        "evidence": 8,
+        "widen": 15,
+        "answer_style": 15
+      },
+      "strategy_means": {
+        "base": 50.96,
+        "widen": 49.14,
+        "evidence": 50.47,
+        "answer_style": 52.99
+      },
+      "best_fixed": 52.99,
+      "best_fixed_strategy": "answer_style",
+      "router": 52.7,
+      "oracle": 58.94,
+      "router_minus_fixed": -0.29,
+      "headroom": 5.95,
+      "label_accuracy": 0.325,
+      "cv_usable": true
+    },
+    {
+      "corpus": "hotpotqa",
+      "n": 24,
+      "label_dist": {
+        "base": 19,
+        "answer_style": 4,
+        "widen": 1
+      },
+      "strategy_means": {
+        "base": 70.51,
+        "widen": 70.6,
+        "evidence": 70.51,
+        "answer_style": 77.18
+      },
+      "best_fixed": 77.18,
+      "best_fixed_strategy": "answer_style",
+      "router": 70.51,
+      "oracle": 79.7,
+      "router_minus_fixed": -6.67,
+      "headroom": 2.51,
+      "label_accuracy": 0.792,
+      "cv_usable": false
+    },
+    {
+      "corpus": "narrativeqa",
+      "n": 58,
+      "label_dist": {
+        "base": 29,
+        "widen": 13,
+        "evidence": 4,
+        "answer_style": 12
+      },
+      "strategy_means": {
+        "base": 32.35,
+        "widen": 33.46,
+        "evidence": 32.19,
+        "answer_style": 36.78
+      },
+      "best_fixed": 36.78,
+      "best_fixed_strategy": "answer_style",
+      "router": 32.35,
+      "oracle": 41.74,
+      "router_minus_fixed": -4.44,
+      "headroom": 4.96,
+      "label_accuracy": 0.5,
+      "cv_usable": false
+    }
+  ],
+  "pooled_label_dist": {
+    "base": 130,
+    "evidence": 12,
+    "widen": 29,
+    "answer_style": 31
+  }
+}

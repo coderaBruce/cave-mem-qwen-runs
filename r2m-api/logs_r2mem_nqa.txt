@@ -1,0 +1,29 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+  [10/240] elapsed=15s
+  [20/240] elapsed=27s
+  [30/240] elapsed=34s
+  [40/240] elapsed=44s
+  [50/240] elapsed=57s
+  [60/240] elapsed=66s
+  [70/240] elapsed=79s
+  [80/240] elapsed=85s
+  [90/240] elapsed=97s
+  [100/240] elapsed=110s
+  [110/240] elapsed=120s
+  [120/240] elapsed=128s
+  [130/240] elapsed=137s
+  [140/240] elapsed=145s
+  [150/240] elapsed=156s
+  [160/240] elapsed=171s
+  [170/240] elapsed=176s
+  [180/240] elapsed=187s
+  [190/240] elapsed=197s
+  [200/240] elapsed=206s
+  [210/240] elapsed=219s
+  [220/240] elapsed=226s
+  [230/240] elapsed=233s
+  [240/240] elapsed=244s
+dataset=narrativeqa  method=r2mem  model=gpt-4o-mini
+samples=240  questions=240  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/r2mem-nqa300
+experience bank: 107 entries {"total": 107, "Reflection/bad": 46, "Reflection/good": 31, "Planning/good": 12, "Planning/bad": 18}

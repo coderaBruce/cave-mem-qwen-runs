@@ -1,0 +1,37 @@
+# Credentials — never commit
+.env
+
+# Virtualenv
+.venv/
+
+# Datasets (hundreds of MB; re-downloadable, see r2m-api/README.md)
+data/hotpotqa/
+data/narrativeqa/
+
+# Run outputs and API caches
+r2m-api/results/
+r2m-api/.cache/
+memory_directions/results/
+memory_directions/.cache/
+memory_directions/checkpoints/
+
+# Local external clones; not required for the Qwen remote-run pipeline
+external_baselines/
+
+# Nested upstream checkout metadata; track source files, not its local .git
+R2M-official/.git/
+
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# LaTeX/editor/build noise
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+.DS_Store

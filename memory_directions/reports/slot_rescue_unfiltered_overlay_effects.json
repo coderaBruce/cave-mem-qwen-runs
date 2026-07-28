@@ -1,0 +1,4004 @@
+{
+  "base_run": "memory_directions/results/locomo-full-elaa-vbr-refined",
+  "overlay_run": "memory_directions/results/locomo-full-slot-rescue-v2-live",
+  "decision_key": "slot_rescue",
+  "n": 1388,
+  "overall": {
+    "n": 1388,
+    "mean_delta": -0.027007549292973953,
+    "positive": 17,
+    "negative": 17,
+    "tie": 1354
+  },
+  "groups": {
+    "answer_type=action": {
+      "n": 1,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1
+    },
+    "answer_type=action|chosen_source=unknown": {
+      "n": 1,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1
+    },
+    "answer_type=action|confidence=high": {
+      "n": 1,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1
+    },
+    "answer_type=advice": {
+      "n": 11,
+      "mean_delta": -0.6297795771479978,
+      "positive": 2,
+      "negative": 2,
+      "tie": 7
+    },
+    "answer_type=advice|chosen_source=unknown": {
+      "n": 11,
+      "mean_delta": -0.6297795771479978,
+      "positive": 2,
+      "negative": 2,
+      "tie": 7
+    },
+    "answer_type=advice|confidence=high": {
+      "n": 11,
+      "mean_delta": -0.6297795771479978,
+      "positive": 2,
+      "negative": 2,
+      "tie": 7
+    },
+    "answer_type=description": {
+      "n": 31,
+      "mean_delta": -3.904900707557255,
+      "positive": 3,
+      "negative": 6,
+      "tie": 22
+    },
+    "answer_type=description|chosen_source=unknown": {
+      "n": 31,
+      "mean_delta": -3.904900707557255,
+      "positive": 3,
+      "negative": 6,
+      "tie": 22
+    },
+    "answer_type=description|confidence=high": {
+      "n": 31,
+      "mean_delta": -3.904900707557255,
+      "positive": 3,
+      "negative": 6,
+      "tie": 22
+    },
+    "answer_type=feeling": {
+      "n": 34,
+      "mean_delta": 1.5414592250303647,
+      "positive": 6,
+      "negative": 3,
+      "tie": 25
+    },
+    "answer_type=feeling|chosen_source=unknown": {
+      "n": 34,
+      "mean_delta": 1.5414592250303647,
+      "positive": 6,
+      "negative": 3,
+      "tie": 25
+    },
+    "answer_type=feeling|confidence=high": {
+      "n": 34,
+      "mean_delta": 1.5414592250303647,
+      "positive": 6,
+      "negative": 3,
+      "tie": 25
+    },
+    "answer_type=list": {
+      "n": 3,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 3
+    },
+    "answer_type=list|chosen_source=unknown": {
+      "n": 3,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 3
+    },
+    "answer_type=list|confidence=high": {
+      "n": 3,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 3
+    },
+    "answer_type=offer": {
+      "n": 4,
+      "mean_delta": -8.594591682826978,
+      "positive": 1,
+      "negative": 2,
+      "tie": 1
+    },
+    "answer_type=offer|chosen_source=unknown": {
+      "n": 4,
+      "mean_delta": -8.594591682826978,
+      "positive": 1,
+      "negative": 2,
+      "tie": 1
+    },
+    "answer_type=offer|confidence=high": {
+      "n": 4,
+      "mean_delta": -8.594591682826978,
+      "positive": 1,
+      "negative": 2,
+      "tie": 1
+    },
+    "answer_type=other": {
+      "n": 2,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 2
+    },
+    "answer_type=other|chosen_source=unknown": {
+      "n": 2,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 2
+    },
+    "answer_type=other|confidence=high": {
+      "n": 2,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 2
+    },
+    "answer_type=quote": {
+      "n": 11,
+      "mean_delta": 0.13721736292269135,
+      "positive": 2,
+      "negative": 3,
+      "tie": 6
+    },
+    "answer_type=quote|chosen_source=unknown": {
+      "n": 11,
+      "mean_delta": 0.13721736292269135,
+      "positive": 2,
+      "negative": 3,
+      "tie": 6
+    },
+    "answer_type=quote|confidence=high": {
+      "n": 11,
+      "mean_delta": 0.13721736292269135,
+      "positive": 2,
+      "negative": 3,
+      "tie": 6
+    },
+    "answer_type=reason": {
+      "n": 11,
+      "mean_delta": 6.450216450216448,
+      "positive": 3,
+      "negative": 1,
+      "tie": 7
+    },
+    "answer_type=reason|chosen_source=unknown": {
+      "n": 11,
+      "mean_delta": 6.450216450216448,
+      "positive": 3,
+      "negative": 1,
+      "tie": 7
+    },
+    "answer_type=reason|confidence=high": {
+      "n": 11,
+      "mean_delta": 6.450216450216448,
+      "positive": 3,
+      "negative": 1,
+      "tie": 7
+    },
+    "answer_type=unknown": {
+      "n": 1280,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1280
+    },
+    "answer_type=unknown|chosen_source=unknown": {
+      "n": 1280,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1280
+    },
+    "answer_type=unknown|confidence=unknown": {
+      "n": 1280,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1280
+    },
+    "chosen_source=unknown": {
+      "n": 1388,
+      "mean_delta": -0.027007549292973953,
+      "positive": 17,
+      "negative": 17,
+      "tie": 1354
+    },
+    "chosen_source=unknown|confidence=high": {
+      "n": 108,
+      "mean_delta": -0.3470970223948875,
+      "positive": 17,
+      "negative": 17,
+      "tie": 74
+    },
+    "chosen_source=unknown|confidence=unknown": {
+      "n": 1280,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1280
+    },
+    "confidence=high": {
+      "n": 108,
+      "mean_delta": -0.3470970223948875,
+      "positive": 17,
+      "negative": 17,
+      "tie": 74
+    },
+    "confidence=unknown": {
+      "n": 1280,
+      "mean_delta": 0.0,
+      "positive": 0,
+      "negative": 0,
+      "tie": 1280
+    }
+  },
+  "top_positive": [
+    {
+      "qid": "conv-41-q122",
+      "category": 4,
+      "question": "How did the flood impact the homes in John's old area?",
+      "gold": "Lots of homes were ruined.",
+      "base": "extensive damage to homes",
+      "overlay": "lots of homes were ruined",
+      "base_f1": 22.222222222222225,
+      "overlay_f1": 100.0,
+      "delta": 77.77777777777777,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "lots of homes were ruined",
+        "evidence_phrase": "lots of homes were ruined",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+        "final_answer_postprocessed": "lots of homes were ruined"
+      }
+    },
+    {
+      "qid": "conv-30-q53",
+      "category": 4,
+      "question": "What did Jon say about creating a special experience for customers?",
+      "gold": "It's the key to making them feel welcome and coming back",
+      "base": "a supportive and encouraging environment",
+      "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+      "base_f1": 13.333333333333334,
+      "overlay_f1": 69.23076923076923,
+      "delta": 55.89743589743589,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "slot_type": "quote",
+        "confidence": "high",
+        "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+        "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+      }
+    },
+    {
+      "qid": "conv-41-q77",
+      "category": 4,
+      "question": "Why did John decide to run for office again?",
+      "gold": "saw the impact he could make in the community through politics",
+      "base": "to enact change and improve living conditions",
+      "overlay": "motivated by the positive impact he can make in the community",
+      "base_f1": 0.0,
+      "overlay_f1": 55.55555555555556,
+      "delta": 55.55555555555556,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "motivated by the positive impact he can make in the community",
+        "evidence_phrase": "motivated by the positive impact he can make in the community",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+        "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+      }
+    },
+    {
+      "qid": "conv-43-q156",
+      "category": 4,
+      "question": "How did John feel after being able to jog without pain?",
+      "gold": "It was a huge success.",
+      "base": "a huge sense of relief and success",
+      "overlay": "a huge success",
+      "base_f1": 40.0,
+      "overlay_f1": 66.66666666666666,
+      "delta": 26.666666666666657,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "a huge success",
+        "evidence_phrase": "a huge success",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+        "final_answer_postprocessed": "a huge success"
+      }
+    },
+    {
+      "qid": "conv-42-q173",
+      "category": 4,
+      "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+      "gold": "respect Joanna for being able to bounce back",
+      "base": "Respect for her resilience",
+      "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+      "base_f1": 33.33333333333333,
+      "overlay_f1": 58.333333333333336,
+      "delta": 25.000000000000007,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+        "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+      }
+    },
+    {
+      "qid": "conv-41-q119",
+      "category": 4,
+      "question": "What inspired John to join the marching event for veterans' rights?",
+      "gold": "Respect for the military and the desire to show support",
+      "base": "longstanding passion for veterans and their rights",
+      "overlay": "deep respect for the military",
+      "base_f1": 26.666666666666668,
+      "overlay_f1": 50.0,
+      "delta": 23.333333333333332,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "deep respect for the military",
+        "evidence_phrase": "driven by his respect for the military",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+        "final_answer_postprocessed": "deep respect for the military"
+      }
+    },
+    {
+      "qid": "conv-49-q121",
+      "category": 4,
+      "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+      "gold": "Find a trainer",
+      "base": "start with good form and technique",
+      "overlay": "beginning with proper form and finding a trainer",
+      "base_f1": 0.0,
+      "overlay_f1": 22.222222222222225,
+      "delta": 22.222222222222225,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "beginning with proper form and finding a trainer",
+        "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+        "slot_type": "advice",
+        "confidence": "high",
+        "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+        "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+      }
+    },
+    {
+      "qid": "conv-49-q146",
+      "category": 4,
+      "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+      "gold": "the recipes for cookies",
+      "base": "cookies and energy balls",
+      "overlay": "recipes for healthy snacks, including energy balls and cookies",
+      "base_f1": 28.571428571428577,
+      "overlay_f1": 50.0,
+      "delta": 21.428571428571423,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+        "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+        "slot_type": "offer",
+        "confidence": "high",
+        "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+        "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+      }
+    },
+    {
+      "qid": "conv-48-q160",
+      "category": 4,
+      "question": "How did Jolene feel after receiving positive feedback at the virtual conference?",
+      "gold": "thrilled and rewarded",
+      "base": "thrilling and rewarding",
+      "overlay": "thrilled",
+      "base_f1": 33.33333333333333,
+      "overlay_f1": 50.0,
+      "delta": 16.66666666666667,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "thrilled",
+        "evidence_phrase": "thrilled",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The phrase 'thrilled' is a more direct and exact expression of Jolene's feeling after receiving positive feedback, as it is a concise adjective that aligns perfectly with the question.",
+        "final_answer_postprocessed": "thrilled"
+      }
+    },
+    {
+      "qid": "conv-41-q115",
+      "category": 4,
+      "question": "How does John describe the support he received during his journey to becoming assistant manager?",
+      "gold": "having support at home and his own grit",
+      "base": "vital to overcoming challenges",
+      "overlay": "vital support from family",
+      "base_f1": 0.0,
+      "overlay_f1": 16.666666666666664,
+      "delta": 16.666666666666664,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "vital support from family",
+        "evidence_phrase": "support from his family",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The phrase 'vital support from family' is a clearer and more specific description of the support John received, directly addressing the question.",
+        "final_answer_postprocessed": "vital support from family"
+      }
+    },
+    {
+      "qid": "conv-48-q143",
+      "category": 4,
+      "question": "How does Jolene describe the feeling of finding her snake snuggled under the bed after it got out?",
+      "gold": "It really showed how much she loves her.",
+      "base": "love and gratitude",
+      "overlay": "so much love and gratitude",
+      "base_f1": 0.0,
+      "overlay_f1": 15.384615384615385,
+      "delta": 15.384615384615385,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "so much love and gratitude",
+        "evidence_phrase": "made me feel so much love and gratitude",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Jolene that clearly describes her feeling, which is more specific than the base answer.",
+        "final_answer_postprocessed": "so much love and gratitude"
+      }
+    },
+    {
+      "qid": "conv-43-q110",
+      "category": 4,
+      "question": "What advice did Tim give John about picking endorsements?",
+      "gold": "Ensure they align with values and brand, look for companies that share the desire to make a change and help others, make sure the endorsement feels authentic",
+      "base": "align with his values and brand",
+      "overlay": "make sure they align with your values and brand",
+      "base_f1": 33.333333333333336,
+      "overlay_f1": 48.484848484848484,
+      "delta": 15.151515151515149,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "make sure they align with your values and brand",
+        "evidence_phrase": "When picking endorsements, make sure they align with your values and brand.",
+        "slot_type": "advice",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Tim's advice to John, which is more specific than the base answer.",
+        "final_answer_postprocessed": "make sure they align with your values and brand"
+      }
+    },
+    {
+      "qid": "conv-47-q82",
+      "category": 4,
+      "question": "What inspired James to create the game character in the virtual world?",
+      "gold": "Appearance of a woman he saw during a walk",
+      "base": "love for video games and personal experiences",
+      "overlay": "a stranger he encountered while walking his dogs",
+      "base_f1": 0.0,
+      "overlay_f1": 14.285714285714285,
+      "delta": 14.285714285714285,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "a stranger he encountered while walking his dogs",
+        "evidence_phrase": "James drew inspiration for his game character from a stranger he encountered while walking his dogs",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The evidence provides a specific and direct phrase that clearly answers the question about what inspired James to create the game character.",
+        "final_answer_postprocessed": "a stranger he encountered while walking his dogs"
+      }
+    },
+    {
+      "qid": "conv-42-q167",
+      "category": 4,
+      "question": "How did Joanna describe the classic movie he watched?",
+      "gold": "gripping with great actors",
+      "base": "amazing",
+      "overlay": "amazing! It's a great story about sisterhood, love, and reaching for your dreams.",
+      "base_f1": 0.0,
+      "overlay_f1": 11.76470588235294,
+      "delta": 11.76470588235294,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "amazing! It's a great story about sisterhood, love, and reaching for your dreams.",
+        "evidence_phrase": "I just watched \"Little Women\" and it was amazing! It's a great story about sisterhood, love, and reaching for your dreams.",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Joanna describing the movie, which is more specific than the base answer.",
+        "final_answer_postprocessed": "amazing! It's a great story about sisterhood, love, and reaching for your dreams."
+      }
+    },
+    {
+      "qid": "conv-30-q76",
+      "category": 4,
+      "question": "What does Gina say to Jon about the grand opening?",
+      "gold": "Let's live it up and make some great memories",
+      "base": "\"so pumped for the launch tomorrow\"",
+      "overlay": "Can't wait for tomorrow's grand opening!",
+      "base_f1": 0.0,
+      "overlay_f1": 11.111111111111112,
+      "delta": 11.111111111111112,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "Can't wait for tomorrow's grand opening!",
+        "evidence_phrase": "Can't wait for tomorrow's grand opening!",
+        "slot_type": "quote",
+        "confidence": "high",
+        "reason": "The phrase 'Can't wait for tomorrow's grand opening!' is a direct quote from Gina that clearly expresses her excitement about the event, making it a better fit for the question than the base answer.",
+        "final_answer_postprocessed": "Can't wait for tomorrow's grand opening!"
+      }
+    },
+    {
+      "qid": "conv-41-q130",
+      "category": 4,
+      "question": "What does John think about trying new classes at the yoga studio?",
+      "gold": "Trying new classes is a fun way to switch up the exercise routine.",
+      "base": "a great way to push oneself and mix things up",
+      "overlay": "enthusiastic about trying new classes",
+      "base_f1": 30.0,
+      "overlay_f1": 37.49999999999999,
+      "delta": 7.499999999999993,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "enthusiastic about trying new classes",
+        "evidence_phrase": "enthusiastic about trying new classes",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The phrase 'enthusiastic about trying new classes' directly reflects John's feelings and is a clearer expression of his attitude compared to the base answer.",
+        "final_answer_postprocessed": "enthusiastic about trying new classes"
+      }
+    },
+    {
+      "qid": "conv-49-q22",
+      "category": 1,
+      "question": "How does Evan describe the woman and his feelings for her that he met in Canada?",
+      "gold": "He says she's cool, incredible, like something out of a movie, and that he feels alive around her. Every moment with her is fun and energetic, also Evan feels really lucky to have someone who gets him.",
+      "base": "incredible Canadian woman",
+      "overlay": "incredible, feel alive",
+      "base_f1": 5.0,
+      "overlay_f1": 10.0,
+      "delta": 5.0,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "incredible, feel alive",
+        "evidence_phrase": "incredible, feel alive",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The phrase 'incredible, feel alive' directly captures Evan's feelings for the woman he met in Canada, making it a clearer and more precise answer than the base answer.",
+        "final_answer_postprocessed": "incredible, feel alive"
+      }
+    },
+    {
+      "qid": "conv-30-q1",
+      "category": 2,
+      "question": "When Jon has lost his job as a banker?",
+      "gold": "19 January, 2023",
+      "base": "January 19, 2023",
+      "overlay": "January 19, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q10",
+      "category": 1,
+      "question": "Which city have both Jean and John visited?",
+      "gold": "Rome",
+      "base": "Rome",
+      "overlay": "Rome",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q11",
+      "category": 2,
+      "question": "When did Gina team up with a local artist for some cool designs?",
+      "gold": "February, 2023",
+      "base": "February 8, 2023",
+      "overlay": "February 8, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q12",
+      "category": 2,
+      "question": "When did Gina get her tattoo?",
+      "gold": "A few years ago",
+      "base": "a few years ago",
+      "overlay": "a few years ago",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q13",
+      "category": 2,
+      "question": "When did Jon start to go to the gym?",
+      "gold": "March, 2023",
+      "base": "The week before 9 March 2023",
+      "overlay": "The week before 9 March 2023",
+      "base_f1": 57.14285714285715,
+      "overlay_f1": 57.14285714285715,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q14",
+      "category": 2,
+      "question": "When did Gina open her online clothing store?",
+      "gold": "16 March, 2023",
+      "base": "16 March 2023",
+      "overlay": "16 March 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q15",
+      "category": 2,
+      "question": "When did Jon start expanding his studio's social media presence?",
+      "gold": "April, 2023",
+      "base": "June 16, 2023",
+      "overlay": "June 16, 2023",
+      "base_f1": 40.0,
+      "overlay_f1": 40.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q16",
+      "category": 2,
+      "question": "When did Jon host a dance competition?",
+      "gold": "May, 2023",
+      "base": "May 2023",
+      "overlay": "May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q17",
+      "category": 2,
+      "question": "When did Jon go to a fair to get more exposure for his dance studio?",
+      "gold": "24 April, 2023",
+      "base": "April 24, 2023",
+      "overlay": "April 24, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q18",
+      "category": 1,
+      "question": "Why did Gina decide to start her own clothing store?",
+      "gold": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "base": "to take control of her own destiny",
+      "overlay": "to take control of her own destiny",
+      "base_f1": 19.354838709677416,
+      "overlay_f1": 19.354838709677416,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "to take control of her own destiny",
+        "evidence_phrase": "take control of her own destiny",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence phrase, which is clearly aligned with the question.",
+        "final_answer_postprocessed": "to take control of her own destiny"
+      }
+    },
+    {
+      "qid": "conv-30-q19",
+      "category": 1,
+      "question": "Do Jon and Gina start businesses out of what they love?",
+      "gold": "Yes",
+      "base": "Yes",
+      "overlay": "Yes",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q2",
+      "category": 2,
+      "question": "When Gina has lost her job at Door Dash?",
+      "gold": "January, 2023",
+      "base": "January 2023",
+      "overlay": "January 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q20",
+      "category": 2,
+      "question": "When did Gina interview for a design internship?",
+      "gold": "10 May, 2023",
+      "base": "10 May 2023",
+      "overlay": "10 May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q21",
+      "category": 2,
+      "question": "When did Gina get accepted for the design internship?",
+      "gold": "27 May, 2023",
+      "base": "27 May 2023",
+      "overlay": "27 May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q22",
+      "category": 2,
+      "question": "When did Jon start reading \"The Lean Startup\"?",
+      "gold": "May, 2023",
+      "base": "27 May 2023",
+      "overlay": "27 May 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q23",
+      "category": 2,
+      "question": "When did Gina develop a video presentation to teach how to style her fashion pieces? ",
+      "gold": "June, 2023",
+      "base": "June 13, 2023",
+      "overlay": "June 13, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q24",
+      "category": 1,
+      "question": "How did Gina promote her clothes store?",
+      "gold": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "base": "ad campaign, new website, unique shopping experience, collaborations, fashion bloggers, promotions",
+      "overlay": "ad campaign, new website, unique shopping experience, collaborations, fashion bloggers, promotions",
+      "base_f1": 19.51219512195122,
+      "overlay_f1": 19.51219512195122,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q25",
+      "category": 1,
+      "question": "Which events has Jon participated in to promote his business venture?",
+      "gold": "fair, networking events, dance competition",
+      "base": "dance competition, workshops, classes, fair, networking events",
+      "overlay": "dance competition, workshops, classes, fair, networking events",
+      "base_f1": 83.33333333333333,
+      "overlay_f1": 83.33333333333333,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q26",
+      "category": 1,
+      "question": "What does Jon's dance studio offer?",
+      "gold": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "base": "dance classes and workshops",
+      "overlay": "dance classes and workshops",
+      "base_f1": 30.0,
+      "overlay_f1": 30.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "dance classes and workshops",
+        "evidence_phrase": "dance classes and workshops",
+        "slot_type": "list",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence provided.",
+        "final_answer_postprocessed": "dance classes and workshops"
+      }
+    },
+    {
+      "qid": "conv-30-q27",
+      "category": 2,
+      "question": "When did Jon receive mentorship to promote his venture?",
+      "gold": "15 June, 2023",
+      "base": "15 June 2023",
+      "overlay": "15 June 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q28",
+      "category": 1,
+      "question": "Did Jon and Gina both participate in dance competitions?",
+      "gold": "Yes",
+      "base": "Yes",
+      "overlay": "Yes",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q29",
+      "category": 2,
+      "question": "When was Jon in Rome?",
+      "gold": "June 2023",
+      "base": "12 June 2023",
+      "overlay": "12 June 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q3",
+      "category": 4,
+      "question": "How do Jon and Gina both like to destress?",
+      "gold": "by dancing",
+      "base": "by dancing",
+      "overlay": "by dancing",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q30",
+      "category": 1,
+      "question": "Which cities has Jon visited?",
+      "gold": "Paris, Rome",
+      "base": "Paris, Rome",
+      "overlay": "Paris, Rome",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q31",
+      "category": 2,
+      "question": "When Jon is planning to open his dance studio?",
+      "gold": "20 June, 2023",
+      "base": "The day after 15 October 2023",
+      "overlay": "The day after 15 October 2023",
+      "base_f1": 25.0,
+      "overlay_f1": 25.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q32",
+      "category": 1,
+      "question": "How long did it take for Jon to open his studio?",
+      "gold": "six months",
+      "base": "approximately six months",
+      "overlay": "approximately six months",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q33",
+      "category": 2,
+      "question": "When did Gina design a limited collection of hoodies?",
+      "gold": "June 2023",
+      "base": "14 June 2023",
+      "overlay": "14 June 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q34",
+      "category": 2,
+      "question": "When did Jon visit networking events for his store?",
+      "gold": "20 June, 2023",
+      "base": "20 June 2023 and 21 July 2023",
+      "overlay": "20 June 2023 and 21 July 2023",
+      "base_f1": 60.0,
+      "overlay_f1": 60.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q35",
+      "category": 2,
+      "question": "When did Gina start being recognized by fashion editors?",
+      "gold": "July 2023",
+      "base": "9 July 2023",
+      "overlay": "9 July 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q36",
+      "category": 2,
+      "question": "When did Jon start learning marketing and analytics tools?",
+      "gold": "July, 2023",
+      "base": "July 9, 2023",
+      "overlay": "July 9, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q37",
+      "category": 2,
+      "question": "When did Jon and Gina decide to collaborate to create dance content?",
+      "gold": "21 July 2023",
+      "base": "July 21, 2023",
+      "overlay": "July 21, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q38",
+      "category": 2,
+      "question": "When did Gina mention Shia Labeouf?",
+      "gold": " 23 July, 2023",
+      "base": "July 23, 2023",
+      "overlay": "July 23, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q39",
+      "category": 2,
+      "question": "When did Gina go to a dance class with a group of friends?",
+      "gold": "21 July 2023",
+      "base": "Friday, 23 July 2023",
+      "overlay": "Friday, 23 July 2023",
+      "base_f1": 57.14285714285715,
+      "overlay_f1": 57.14285714285715,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q4",
+      "category": 1,
+      "question": "What do Jon and Gina both have in common?",
+      "gold": "They lost their jobs and decided to start their own businesses.",
+      "base": "Starting their own businesses after losing their jobs",
+      "overlay": "Starting their own businesses after losing their jobs",
+      "base_f1": 52.63157894736842,
+      "overlay_f1": 52.63157894736842,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q40",
+      "category": 4,
+      "question": "What is Gina's favorite style of dance?",
+      "gold": "Contemporary",
+      "base": "contemporary",
+      "overlay": "contemporary",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q41",
+      "category": 4,
+      "question": "What is Jon's favorite style of dance?",
+      "gold": "Contemporary",
+      "base": "contemporary",
+      "overlay": "contemporary",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q42",
+      "category": 4,
+      "question": "What was Gina's favorite dancing memory?",
+      "gold": "Winning first place at a regionals dance competition",
+      "base": "first place at a regional dance competition",
+      "overlay": "first place at a regional dance competition",
+      "base_f1": 76.92307692307692,
+      "overlay_f1": 76.92307692307692,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q43",
+      "category": 4,
+      "question": "What kind of dance piece did Gina's team perform to win first place?",
+      "gold": "\"Finding Freedom\"",
+      "base": "Finding Freedom",
+      "overlay": "Finding Freedom",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q44",
+      "category": 4,
+      "question": "What do the dancers in the photo represent?",
+      "gold": "They are performing at the festival",
+      "base": "a passion for dance and self-expression",
+      "overlay": "a passion for dance and self-expression",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "a passion for dance and self-expression",
+        "evidence_phrase": "a passion for dance and self-expression",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence provided in the memory summary.",
+        "final_answer_postprocessed": "a passion for dance and self-expression"
+      }
+    },
+    {
+      "qid": "conv-30-q45",
+      "category": 4,
+      "question": "What does Gina say about the dancers in the photo?",
+      "gold": "They look graceful",
+      "base": "Support for dancers to grow and express themselves",
+      "overlay": "Support for dancers to grow and express themselves",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "Support for dancers to grow and express themselves",
+        "evidence_phrase": "",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The base answer is already a clear and direct statement reflecting Gina's support for the dancers, which aligns well with the evidence provided.",
+        "final_answer_postprocessed": "Support for dancers to grow and express themselves"
+      }
+    },
+    {
+      "qid": "conv-30-q46",
+      "category": 4,
+      "question": "What is Jon's attitude towards being part of the dance festival?",
+      "gold": "Glad",
+      "base": "enthusiastic and optimistic",
+      "overlay": "enthusiastic and optimistic",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q47",
+      "category": 4,
+      "question": "What kind of flooring is Jon looking for in his dance studio?",
+      "gold": "Marley flooring",
+      "base": "Marley flooring",
+      "overlay": "Marley flooring",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q48",
+      "category": 4,
+      "question": "What did Gina find for her clothing store on 1 February, 2023?",
+      "gold": "The perfect spot for her store",
+      "base": "a wholesaler who agreed to work with her",
+      "overlay": "a wholesaler who agreed to work with her",
+      "base_f1": 16.666666666666664,
+      "overlay_f1": 16.666666666666664,
+      "delta": 0.0,
+      "decision": {}
+    }
+  ],
+  "top_negative": [
+    {
+      "qid": "conv-43-q88",
+      "category": 4,
+      "question": "How did John describe the team bond?",
+      "gold": "Awesome",
+      "base": "awesome",
+      "overlay": "awesome and it makes all the hard work worth it",
+      "base_f1": 100.0,
+      "overlay_f1": 20.0,
+      "delta": -80.0,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "awesome and it makes all the hard work worth it",
+        "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+        "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+      }
+    },
+    {
+      "qid": "conv-47-q72",
+      "category": 4,
+      "question": "What did James offer to do for John regarding pets?",
+      "gold": "help find the perfect pet",
+      "base": "help find the perfect pet",
+      "overlay": "help him find the perfect one when he's ready",
+      "base_f1": 100.0,
+      "overlay_f1": 46.15384615384615,
+      "delta": -53.84615384615385,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "help him find the perfect one when he's ready",
+        "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+        "slot_type": "offer",
+        "confidence": "high",
+        "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+        "final_answer_postprocessed": "help him find the perfect one when he's ready"
+      }
+    },
+    {
+      "qid": "conv-50-q133",
+      "category": 4,
+      "question": "How does Calvin describe his music in relation to capturing feelings?",
+      "gold": "Express himself and work through his emotions",
+      "base": "a way to express himself and work through his emotions",
+      "overlay": "a means to express himself and capture the feelings of struggles",
+      "base_f1": 87.50000000000001,
+      "overlay_f1": 37.5,
+      "delta": -50.000000000000014,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "a means to express himself and capture the feelings of struggles",
+        "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+        "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+      }
+    },
+    {
+      "qid": "conv-42-q72",
+      "category": 1,
+      "question": "What do both Joanna and Nate appreciate the beauty of?",
+      "gold": "Nature",
+      "base": "nature",
+      "overlay": "the beauty of nature",
+      "base_f1": 100.0,
+      "overlay_f1": 50.0,
+      "delta": -50.0,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "the beauty of nature",
+        "evidence_phrase": "the beauty of nature",
+        "slot_type": "quote",
+        "confidence": "high",
+        "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+        "final_answer_postprocessed": "the beauty of nature"
+      }
+    },
+    {
+      "qid": "conv-48-q132",
+      "category": 4,
+      "question": "How does Jolene describe the time spent with her snakes and partner?",
+      "gold": "Valuable and relaxing",
+      "base": "calming and valuable",
+      "overlay": "valuable and teaches me to take time and be in tune with myself",
+      "base_f1": 66.66666666666666,
+      "overlay_f1": 25.0,
+      "delta": -41.66666666666666,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "valuable and teaches me to take time and be in tune with myself",
+        "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+        "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+      }
+    },
+    {
+      "qid": "conv-41-q146",
+      "category": 4,
+      "question": "How does John describe the camping trip with Max?",
+      "gold": "Peaceful and awesome",
+      "base": "awesome experience",
+      "overlay": "a blast",
+      "base_f1": 40.0,
+      "overlay_f1": 0.0,
+      "delta": -40.0,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "a blast",
+        "evidence_phrase": "had a blast on our camping trip",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+        "final_answer_postprocessed": "a blast"
+      }
+    },
+    {
+      "qid": "conv-49-q150",
+      "category": 4,
+      "question": "What advice did Evan suggest Sam seek from a doctor?",
+      "gold": "diet plan and low-impact exercises",
+      "base": "balanced diet plan and low-impact exercises",
+      "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+      "base_f1": 92.3076923076923,
+      "overlay_f1": 63.1578947368421,
+      "delta": -29.149797570850204,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+        "slot_type": "advice",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+        "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+      }
+    },
+    {
+      "qid": "conv-41-q98",
+      "category": 4,
+      "question": "Why did Maria join a nearby church recently?",
+      "gold": "to feel closer to a community and her faith",
+      "base": "to feel closer to a community and her faith",
+      "overlay": "I wanted to feel closer to a community and my faith.",
+      "base_f1": 100.0,
+      "overlay_f1": 77.77777777777777,
+      "delta": -22.22222222222223,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "I wanted to feel closer to a community and my faith.",
+        "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+        "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+      }
+    },
+    {
+      "qid": "conv-41-q126",
+      "category": 4,
+      "question": "What does John appreciate about the veteran's hospital visit?",
+      "gold": "the resilience of the veterans and their inspiring stories",
+      "base": "appreciation for veterans' sacrifices",
+      "overlay": "appreciation for what we have",
+      "base_f1": 18.181818181818183,
+      "overlay_f1": 0.0,
+      "delta": -18.181818181818183,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "appreciation for what we have",
+        "evidence_phrase": "It made me appreciate what we have and the need to give back.",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The evidence provides a clearer and more direct phrase that aligns with the question about what John appreciates.",
+        "final_answer_postprocessed": "appreciation for what we have"
+      }
+    },
+    {
+      "qid": "conv-50-q120",
+      "category": 4,
+      "question": "What does working on cars represent for Dave?",
+      "gold": "Therapy and a way to get away from everyday stress",
+      "base": "a deep passion and a form of therapy",
+      "overlay": "it's therapeutic to see them come back to life",
+      "base_f1": 26.666666666666668,
+      "overlay_f1": 10.526315789473685,
+      "delta": -16.140350877192983,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "it's therapeutic to see them come back to life",
+        "evidence_phrase": "it's therapeutic to see them come back to life",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The phrase directly captures Dave's feeling about working on cars and is a clearer expression than the base answer.",
+        "final_answer_postprocessed": "it's therapeutic to see them come back to life"
+      }
+    },
+    {
+      "qid": "conv-47-q78",
+      "category": 4,
+      "question": "What advice did James receive from the famous players he met at the tournament?",
+      "gold": "never put your ego above team success",
+      "base": "effective communication and team success",
+      "overlay": "communicating correctly with the team",
+      "base_f1": 33.33333333333333,
+      "overlay_f1": 18.181818181818183,
+      "delta": -15.151515151515145,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "communicating correctly with the team",
+        "evidence_phrase": "the importance of communicating correctly with the team",
+        "slot_type": "advice",
+        "confidence": "high",
+        "reason": "The evidence provides a clearer and more specific piece of advice directly related to the question.",
+        "final_answer_postprocessed": "communicating correctly with the team"
+      }
+    },
+    {
+      "qid": "conv-41-q109",
+      "category": 4,
+      "question": "What did Maria say it was like being at the waterfall in Oregon?",
+      "gold": "Like being in a fairy tale",
+      "base": "like she was in a fairy tale",
+      "overlay": "I felt like I was in a fairy tale!",
+      "base_f1": 72.72727272727272,
+      "overlay_f1": 61.53846153846154,
+      "delta": -11.18881118881118,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "I felt like I was in a fairy tale!",
+        "evidence_phrase": "I felt like I was in a fairy tale! The water sounded so calming and the surroundings were beautiful.",
+        "slot_type": "quote",
+        "confidence": "high",
+        "reason": "The evidence provides an exact quote from Maria that directly answers the question about her experience at the waterfall.",
+        "final_answer_postprocessed": "I felt like I was in a fairy tale!"
+      }
+    },
+    {
+      "qid": "conv-43-q134",
+      "category": 4,
+      "question": "How did John describe the views during their road trip out on the European coastline?",
+      "gold": "Spectacular",
+      "base": "amazing and spectacular",
+      "overlay": "amazing! The views were spectacular",
+      "base_f1": 50.0,
+      "overlay_f1": 40.0,
+      "delta": -10.0,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "amazing! The views were spectacular",
+        "evidence_phrase": "The views were spectacular",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from John describing the views, which is more specific than the base answer.",
+        "final_answer_postprocessed": "amazing! The views were spectacular"
+      }
+    },
+    {
+      "qid": "conv-50-q113",
+      "category": 4,
+      "question": "How does Dave feel about the reactions of people when they see the finished restoration project?",
+      "gold": "satisfying and worth the hard work",
+      "base": "strong sense of satisfaction and pride",
+      "overlay": "satisfying to see this brought back to life, especially with people's reactions when they see the finished product",
+      "base_f1": 18.18181818181818,
+      "overlay_f1": 8.695652173913045,
+      "delta": -9.486166007905135,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "satisfying to see this brought back to life, especially with people's reactions when they see the finished product",
+        "evidence_phrase": "it's so satisfying to see this brought back to life, especially with people's reactions when they see the finished product",
+        "slot_type": "feeling",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Dave expressing his feelings about the reactions of people to the restoration project, which is more specific than the base answer.",
+        "final_answer_postprocessed": "satisfying to see this brought back to life, especially with people's reactions when they see the finished product"
+      }
+    },
+    {
+      "qid": "conv-42-q124",
+      "category": 4,
+      "question": "How does Nate describe the stuffed animal he got for Joanna?",
+      "gold": "A stuffed animal to remind you of the good vibes",
+      "base": "stuffed animal dog",
+      "overlay": "a stuffed animal dog named Tilly",
+      "base_f1": 36.36363636363637,
+      "overlay_f1": 30.76923076923077,
+      "delta": -5.594405594405597,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "a stuffed animal dog named Tilly",
+        "evidence_phrase": "the stuffed animal dog Nate gave her, named Tilly",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The phrase 'a stuffed animal dog named Tilly' is a more precise description directly from the evidence, enhancing the clarity of the answer.",
+        "final_answer_postprocessed": "a stuffed animal dog named Tilly"
+      }
+    },
+    {
+      "qid": "conv-42-q190",
+      "category": 4,
+      "question": "What inspired Nate to start making gaming videos?",
+      "gold": "Love of gaming and connecting with others who enjoy it too",
+      "base": "big fan of gaming videos",
+      "overlay": "I'm a big fan of them and thought it would be a fun idea to start making them myself.",
+      "base_f1": 25.000000000000007,
+      "overlay_f1": 20.689655172413794,
+      "delta": -4.3103448275862135,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "I'm a big fan of them and thought it would be a fun idea to start making them myself.",
+        "evidence_phrase": "I'm a big fan of them and thought it would be a fun idea to start making them myself.",
+        "slot_type": "quote",
+        "confidence": "high",
+        "reason": "The evidence provides a direct quote from Nate that clearly answers the question about what inspired him to start making gaming videos.",
+        "final_answer_postprocessed": "I'm a big fan of them and thought it would be a fun idea to start making them myself."
+      }
+    },
+    {
+      "qid": "conv-30-q81",
+      "category": 4,
+      "question": "What offer does Gina make to Jon regarding social media?",
+      "gold": "Helping with making content and managing his social media accounts.",
+      "base": "help with marketing strategies for social media",
+      "overlay": "help with marketing strategies, particularly on social media",
+      "base_f1": 35.29411764705882,
+      "overlay_f1": 33.33333333333333,
+      "delta": -1.9607843137254903,
+      "decision": {
+        "should_replace": true,
+        "final_answer": "help with marketing strategies, particularly on social media",
+        "evidence_phrase": "offered her assistance with marketing strategies, particularly on social media",
+        "slot_type": "offer",
+        "confidence": "high",
+        "reason": "The evidence provides a more specific phrase directly related to the offer Gina makes to Jon regarding social media.",
+        "final_answer_postprocessed": "help with marketing strategies, particularly on social media"
+      }
+    },
+    {
+      "qid": "conv-30-q1",
+      "category": 2,
+      "question": "When Jon has lost his job as a banker?",
+      "gold": "19 January, 2023",
+      "base": "January 19, 2023",
+      "overlay": "January 19, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q10",
+      "category": 1,
+      "question": "Which city have both Jean and John visited?",
+      "gold": "Rome",
+      "base": "Rome",
+      "overlay": "Rome",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q11",
+      "category": 2,
+      "question": "When did Gina team up with a local artist for some cool designs?",
+      "gold": "February, 2023",
+      "base": "February 8, 2023",
+      "overlay": "February 8, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q12",
+      "category": 2,
+      "question": "When did Gina get her tattoo?",
+      "gold": "A few years ago",
+      "base": "a few years ago",
+      "overlay": "a few years ago",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q13",
+      "category": 2,
+      "question": "When did Jon start to go to the gym?",
+      "gold": "March, 2023",
+      "base": "The week before 9 March 2023",
+      "overlay": "The week before 9 March 2023",
+      "base_f1": 57.14285714285715,
+      "overlay_f1": 57.14285714285715,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q14",
+      "category": 2,
+      "question": "When did Gina open her online clothing store?",
+      "gold": "16 March, 2023",
+      "base": "16 March 2023",
+      "overlay": "16 March 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q15",
+      "category": 2,
+      "question": "When did Jon start expanding his studio's social media presence?",
+      "gold": "April, 2023",
+      "base": "June 16, 2023",
+      "overlay": "June 16, 2023",
+      "base_f1": 40.0,
+      "overlay_f1": 40.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q16",
+      "category": 2,
+      "question": "When did Jon host a dance competition?",
+      "gold": "May, 2023",
+      "base": "May 2023",
+      "overlay": "May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q17",
+      "category": 2,
+      "question": "When did Jon go to a fair to get more exposure for his dance studio?",
+      "gold": "24 April, 2023",
+      "base": "April 24, 2023",
+      "overlay": "April 24, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q18",
+      "category": 1,
+      "question": "Why did Gina decide to start her own clothing store?",
+      "gold": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "base": "to take control of her own destiny",
+      "overlay": "to take control of her own destiny",
+      "base_f1": 19.354838709677416,
+      "overlay_f1": 19.354838709677416,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "to take control of her own destiny",
+        "evidence_phrase": "take control of her own destiny",
+        "slot_type": "reason",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence phrase, which is clearly aligned with the question.",
+        "final_answer_postprocessed": "to take control of her own destiny"
+      }
+    },
+    {
+      "qid": "conv-30-q19",
+      "category": 1,
+      "question": "Do Jon and Gina start businesses out of what they love?",
+      "gold": "Yes",
+      "base": "Yes",
+      "overlay": "Yes",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q2",
+      "category": 2,
+      "question": "When Gina has lost her job at Door Dash?",
+      "gold": "January, 2023",
+      "base": "January 2023",
+      "overlay": "January 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q20",
+      "category": 2,
+      "question": "When did Gina interview for a design internship?",
+      "gold": "10 May, 2023",
+      "base": "10 May 2023",
+      "overlay": "10 May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q21",
+      "category": 2,
+      "question": "When did Gina get accepted for the design internship?",
+      "gold": "27 May, 2023",
+      "base": "27 May 2023",
+      "overlay": "27 May 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q22",
+      "category": 2,
+      "question": "When did Jon start reading \"The Lean Startup\"?",
+      "gold": "May, 2023",
+      "base": "27 May 2023",
+      "overlay": "27 May 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q23",
+      "category": 2,
+      "question": "When did Gina develop a video presentation to teach how to style her fashion pieces? ",
+      "gold": "June, 2023",
+      "base": "June 13, 2023",
+      "overlay": "June 13, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q24",
+      "category": 1,
+      "question": "How did Gina promote her clothes store?",
+      "gold": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "base": "ad campaign, new website, unique shopping experience, collaborations, fashion bloggers, promotions",
+      "overlay": "ad campaign, new website, unique shopping experience, collaborations, fashion bloggers, promotions",
+      "base_f1": 19.51219512195122,
+      "overlay_f1": 19.51219512195122,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q25",
+      "category": 1,
+      "question": "Which events has Jon participated in to promote his business venture?",
+      "gold": "fair, networking events, dance competition",
+      "base": "dance competition, workshops, classes, fair, networking events",
+      "overlay": "dance competition, workshops, classes, fair, networking events",
+      "base_f1": 83.33333333333333,
+      "overlay_f1": 83.33333333333333,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q26",
+      "category": 1,
+      "question": "What does Jon's dance studio offer?",
+      "gold": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "base": "dance classes and workshops",
+      "overlay": "dance classes and workshops",
+      "base_f1": 30.0,
+      "overlay_f1": 30.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "dance classes and workshops",
+        "evidence_phrase": "dance classes and workshops",
+        "slot_type": "list",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence provided.",
+        "final_answer_postprocessed": "dance classes and workshops"
+      }
+    },
+    {
+      "qid": "conv-30-q27",
+      "category": 2,
+      "question": "When did Jon receive mentorship to promote his venture?",
+      "gold": "15 June, 2023",
+      "base": "15 June 2023",
+      "overlay": "15 June 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q28",
+      "category": 1,
+      "question": "Did Jon and Gina both participate in dance competitions?",
+      "gold": "Yes",
+      "base": "Yes",
+      "overlay": "Yes",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q29",
+      "category": 2,
+      "question": "When was Jon in Rome?",
+      "gold": "June 2023",
+      "base": "12 June 2023",
+      "overlay": "12 June 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q3",
+      "category": 4,
+      "question": "How do Jon and Gina both like to destress?",
+      "gold": "by dancing",
+      "base": "by dancing",
+      "overlay": "by dancing",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q30",
+      "category": 1,
+      "question": "Which cities has Jon visited?",
+      "gold": "Paris, Rome",
+      "base": "Paris, Rome",
+      "overlay": "Paris, Rome",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q31",
+      "category": 2,
+      "question": "When Jon is planning to open his dance studio?",
+      "gold": "20 June, 2023",
+      "base": "The day after 15 October 2023",
+      "overlay": "The day after 15 October 2023",
+      "base_f1": 25.0,
+      "overlay_f1": 25.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q32",
+      "category": 1,
+      "question": "How long did it take for Jon to open his studio?",
+      "gold": "six months",
+      "base": "approximately six months",
+      "overlay": "approximately six months",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q33",
+      "category": 2,
+      "question": "When did Gina design a limited collection of hoodies?",
+      "gold": "June 2023",
+      "base": "14 June 2023",
+      "overlay": "14 June 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q34",
+      "category": 2,
+      "question": "When did Jon visit networking events for his store?",
+      "gold": "20 June, 2023",
+      "base": "20 June 2023 and 21 July 2023",
+      "overlay": "20 June 2023 and 21 July 2023",
+      "base_f1": 60.0,
+      "overlay_f1": 60.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q35",
+      "category": 2,
+      "question": "When did Gina start being recognized by fashion editors?",
+      "gold": "July 2023",
+      "base": "9 July 2023",
+      "overlay": "9 July 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q36",
+      "category": 2,
+      "question": "When did Jon start learning marketing and analytics tools?",
+      "gold": "July, 2023",
+      "base": "July 9, 2023",
+      "overlay": "July 9, 2023",
+      "base_f1": 80.0,
+      "overlay_f1": 80.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q37",
+      "category": 2,
+      "question": "When did Jon and Gina decide to collaborate to create dance content?",
+      "gold": "21 July 2023",
+      "base": "July 21, 2023",
+      "overlay": "July 21, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q38",
+      "category": 2,
+      "question": "When did Gina mention Shia Labeouf?",
+      "gold": " 23 July, 2023",
+      "base": "July 23, 2023",
+      "overlay": "July 23, 2023",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q39",
+      "category": 2,
+      "question": "When did Gina go to a dance class with a group of friends?",
+      "gold": "21 July 2023",
+      "base": "Friday, 23 July 2023",
+      "overlay": "Friday, 23 July 2023",
+      "base_f1": 57.14285714285715,
+      "overlay_f1": 57.14285714285715,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q4",
+      "category": 1,
+      "question": "What do Jon and Gina both have in common?",
+      "gold": "They lost their jobs and decided to start their own businesses.",
+      "base": "Starting their own businesses after losing their jobs",
+      "overlay": "Starting their own businesses after losing their jobs",
+      "base_f1": 52.63157894736842,
+      "overlay_f1": 52.63157894736842,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q40",
+      "category": 4,
+      "question": "What is Gina's favorite style of dance?",
+      "gold": "Contemporary",
+      "base": "contemporary",
+      "overlay": "contemporary",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q41",
+      "category": 4,
+      "question": "What is Jon's favorite style of dance?",
+      "gold": "Contemporary",
+      "base": "contemporary",
+      "overlay": "contemporary",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q42",
+      "category": 4,
+      "question": "What was Gina's favorite dancing memory?",
+      "gold": "Winning first place at a regionals dance competition",
+      "base": "first place at a regional dance competition",
+      "overlay": "first place at a regional dance competition",
+      "base_f1": 76.92307692307692,
+      "overlay_f1": 76.92307692307692,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q43",
+      "category": 4,
+      "question": "What kind of dance piece did Gina's team perform to win first place?",
+      "gold": "\"Finding Freedom\"",
+      "base": "Finding Freedom",
+      "overlay": "Finding Freedom",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q44",
+      "category": 4,
+      "question": "What do the dancers in the photo represent?",
+      "gold": "They are performing at the festival",
+      "base": "a passion for dance and self-expression",
+      "overlay": "a passion for dance and self-expression",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "a passion for dance and self-expression",
+        "evidence_phrase": "a passion for dance and self-expression",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The base answer is already an exact match to the evidence provided in the memory summary.",
+        "final_answer_postprocessed": "a passion for dance and self-expression"
+      }
+    },
+    {
+      "qid": "conv-30-q45",
+      "category": 4,
+      "question": "What does Gina say about the dancers in the photo?",
+      "gold": "They look graceful",
+      "base": "Support for dancers to grow and express themselves",
+      "overlay": "Support for dancers to grow and express themselves",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {
+        "should_replace": false,
+        "final_answer": "Support for dancers to grow and express themselves",
+        "evidence_phrase": "",
+        "slot_type": "description",
+        "confidence": "high",
+        "reason": "The base answer is already a clear and direct statement reflecting Gina's support for the dancers, which aligns well with the evidence provided.",
+        "final_answer_postprocessed": "Support for dancers to grow and express themselves"
+      }
+    },
+    {
+      "qid": "conv-30-q46",
+      "category": 4,
+      "question": "What is Jon's attitude towards being part of the dance festival?",
+      "gold": "Glad",
+      "base": "enthusiastic and optimistic",
+      "overlay": "enthusiastic and optimistic",
+      "base_f1": 0.0,
+      "overlay_f1": 0.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q47",
+      "category": 4,
+      "question": "What kind of flooring is Jon looking for in his dance studio?",
+      "gold": "Marley flooring",
+      "base": "Marley flooring",
+      "overlay": "Marley flooring",
+      "base_f1": 100.0,
+      "overlay_f1": 100.0,
+      "delta": 0.0,
+      "decision": {}
+    },
+    {
+      "qid": "conv-30-q48",
+      "category": 4,
+      "question": "What did Gina find for her clothing store on 1 February, 2023?",
+      "gold": "The perfect spot for her store",
+      "base": "a wholesaler who agreed to work with her",
+      "overlay": "a wholesaler who agreed to work with her",
+      "base_f1": 16.666666666666664,
+      "overlay_f1": 16.666666666666664,
+      "delta": 0.0,
+      "decision": {}
+    }
+  ],
+  "examples": {
+    "answer_type=advice": [
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      }
+    ],
+    "answer_type=advice|chosen_source=unknown": [
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      }
+    ],
+    "answer_type=advice|confidence=high": [
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      }
+    ],
+    "answer_type=description": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      }
+    ],
+    "answer_type=description|chosen_source=unknown": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      }
+    ],
+    "answer_type=description|confidence=high": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      }
+    ],
+    "answer_type=feeling": [
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      }
+    ],
+    "answer_type=feeling|chosen_source=unknown": [
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      }
+    ],
+    "answer_type=feeling|confidence=high": [
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      }
+    ],
+    "answer_type=offer": [
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ],
+    "answer_type=offer|chosen_source=unknown": [
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ],
+    "answer_type=offer|confidence=high": [
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ],
+    "answer_type=quote": [
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      }
+    ],
+    "answer_type=quote|chosen_source=unknown": [
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      }
+    ],
+    "answer_type=quote|confidence=high": [
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      }
+    ],
+    "answer_type=reason": [
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      }
+    ],
+    "answer_type=reason|chosen_source=unknown": [
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      }
+    ],
+    "answer_type=reason|confidence=high": [
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      }
+    ],
+    "chosen_source=unknown": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      },
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ],
+    "chosen_source=unknown|confidence=high": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      },
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ],
+    "confidence=high": [
+      {
+        "qid": "conv-43-q88",
+        "category": 4,
+        "question": "How did John describe the team bond?",
+        "gold": "Awesome",
+        "base": "awesome",
+        "overlay": "awesome and it makes all the hard work worth it",
+        "base_f1": 100.0,
+        "overlay_f1": 20.0,
+        "delta": -80.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "awesome and it makes all the hard work worth it",
+          "evidence_phrase": "Our team bond is awesome and it makes all the hard work worth it.",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from John that describes the team bond more fully than the base answer.",
+          "final_answer_postprocessed": "awesome and it makes all the hard work worth it"
+        }
+      },
+      {
+        "qid": "conv-41-q122",
+        "category": 4,
+        "question": "How did the flood impact the homes in John's old area?",
+        "gold": "Lots of homes were ruined.",
+        "base": "extensive damage to homes",
+        "overlay": "lots of homes were ruined",
+        "base_f1": 22.222222222222225,
+        "overlay_f1": 100.0,
+        "delta": 77.77777777777777,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "lots of homes were ruined",
+          "evidence_phrase": "lots of homes were ruined",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'lots of homes were ruined' from the evidence is a clearer and more direct description of the impact of the flood on homes compared to the base answer.",
+          "final_answer_postprocessed": "lots of homes were ruined"
+        }
+      },
+      {
+        "qid": "conv-30-q53",
+        "category": 4,
+        "question": "What did Jon say about creating a special experience for customers?",
+        "gold": "It's the key to making them feel welcome and coming back",
+        "base": "a supportive and encouraging environment",
+        "overlay": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+        "base_f1": 13.333333333333334,
+        "overlay_f1": 69.23076923076923,
+        "delta": 55.89743589743589,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "evidence_phrase": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Jon that clearly addresses the question about what he said regarding creating a special experience for customers.",
+          "final_answer_postprocessed": "Creating a special experience for customers is the key to making them feel welcome and coming back."
+        }
+      },
+      {
+        "qid": "conv-41-q77",
+        "category": 4,
+        "question": "Why did John decide to run for office again?",
+        "gold": "saw the impact he could make in the community through politics",
+        "base": "to enact change and improve living conditions",
+        "overlay": "motivated by the positive impact he can make in the community",
+        "base_f1": 0.0,
+        "overlay_f1": 55.55555555555556,
+        "delta": 55.55555555555556,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "motivated by the positive impact he can make in the community",
+          "evidence_phrase": "motivated by the positive impact he can make in the community",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a clear and direct phrase that explains John's motivation for running for office again, which is more specific than the base answer.",
+          "final_answer_postprocessed": "motivated by the positive impact he can make in the community"
+        }
+      },
+      {
+        "qid": "conv-47-q72",
+        "category": 4,
+        "question": "What did James offer to do for John regarding pets?",
+        "gold": "help find the perfect pet",
+        "base": "help find the perfect pet",
+        "overlay": "help him find the perfect one when he's ready",
+        "base_f1": 100.0,
+        "overlay_f1": 46.15384615384615,
+        "delta": -53.84615384615385,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "help him find the perfect one when he's ready",
+          "evidence_phrase": "James offered to help John find the perfect one when he's ready.",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence contains a clearer and more specific phrase directly related to what James offered to do for John regarding pets.",
+          "final_answer_postprocessed": "help him find the perfect one when he's ready"
+        }
+      },
+      {
+        "qid": "conv-50-q133",
+        "category": 4,
+        "question": "How does Calvin describe his music in relation to capturing feelings?",
+        "gold": "Express himself and work through his emotions",
+        "base": "a way to express himself and work through his emotions",
+        "overlay": "a means to express himself and capture the feelings of struggles",
+        "base_f1": 87.50000000000001,
+        "overlay_f1": 37.5,
+        "delta": -50.000000000000014,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a means to express himself and capture the feelings of struggles",
+          "evidence_phrase": "a means to express himself and capture the feelings of struggles",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'a means to express himself and capture the feelings of struggles' is a clearer and more specific description of how Calvin relates his music to capturing feelings, directly aligning with the question.",
+          "final_answer_postprocessed": "a means to express himself and capture the feelings of struggles"
+        }
+      },
+      {
+        "qid": "conv-42-q72",
+        "category": 1,
+        "question": "What do both Joanna and Nate appreciate the beauty of?",
+        "gold": "Nature",
+        "base": "nature",
+        "overlay": "the beauty of nature",
+        "base_f1": 100.0,
+        "overlay_f1": 50.0,
+        "delta": -50.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "the beauty of nature",
+          "evidence_phrase": "the beauty of nature",
+          "slot_type": "quote",
+          "confidence": "high",
+          "reason": "The phrase 'the beauty of nature' is an exact match from the evidence and directly answers the question.",
+          "final_answer_postprocessed": "the beauty of nature"
+        }
+      },
+      {
+        "qid": "conv-48-q132",
+        "category": 4,
+        "question": "How does Jolene describe the time spent with her snakes and partner?",
+        "gold": "Valuable and relaxing",
+        "base": "calming and valuable",
+        "overlay": "valuable and teaches me to take time and be in tune with myself",
+        "base_f1": 66.66666666666666,
+        "overlay_f1": 25.0,
+        "delta": -41.66666666666666,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "valuable and teaches me to take time and be in tune with myself",
+          "evidence_phrase": "our time together is valuable and teaches me to take time and be in tune with myself",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific description of how Jolene feels about her time with her snakes, directly addressing the question.",
+          "final_answer_postprocessed": "valuable and teaches me to take time and be in tune with myself"
+        }
+      },
+      {
+        "qid": "conv-41-q146",
+        "category": 4,
+        "question": "How does John describe the camping trip with Max?",
+        "gold": "Peaceful and awesome",
+        "base": "awesome experience",
+        "overlay": "a blast",
+        "base_f1": 40.0,
+        "overlay_f1": 0.0,
+        "delta": -40.0,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a blast",
+          "evidence_phrase": "had a blast on our camping trip",
+          "slot_type": "description",
+          "confidence": "high",
+          "reason": "The phrase 'had a blast' is a direct quote from John describing the camping trip, making it a clearer and more precise answer than 'awesome experience'.",
+          "final_answer_postprocessed": "a blast"
+        }
+      },
+      {
+        "qid": "conv-49-q150",
+        "category": 4,
+        "question": "What advice did Evan suggest Sam seek from a doctor?",
+        "gold": "diet plan and low-impact exercises",
+        "base": "balanced diet plan and low-impact exercises",
+        "overlay": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+        "base_f1": 92.3076923076923,
+        "overlay_f1": 63.1578947368421,
+        "delta": -29.149797570850204,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "ask the doc about a balanced diet plan and getting advice on low-impact exercises",
+          "evidence_phrase": "I'm gonna ask the doc about a balanced diet plan and getting advice on low-impact exercises, given my current situation.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Sam about the specific advice he plans to seek from the doctor, which is more precise than the base answer.",
+          "final_answer_postprocessed": "ask the doc about a balanced diet plan and getting advice on low-impact exercises"
+        }
+      },
+      {
+        "qid": "conv-43-q156",
+        "category": 4,
+        "question": "How did John feel after being able to jog without pain?",
+        "gold": "It was a huge success.",
+        "base": "a huge sense of relief and success",
+        "overlay": "a huge success",
+        "base_f1": 40.0,
+        "overlay_f1": 66.66666666666666,
+        "delta": 26.666666666666657,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "a huge success",
+          "evidence_phrase": "a huge success",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence directly quotes John expressing his feeling of 'a huge success' after jogging without pain, which is a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "a huge success"
+        }
+      },
+      {
+        "qid": "conv-42-q173",
+        "category": 4,
+        "question": "How does Nate feel about Joanna's ability to bounce back from setbacks?",
+        "gold": "respect Joanna for being able to bounce back",
+        "base": "Respect for her resilience",
+        "overlay": "I really respect you for that and being able to bounce back whenever something sad happens!",
+        "base_f1": 33.33333333333333,
+        "overlay_f1": 58.333333333333336,
+        "delta": 25.000000000000007,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "evidence_phrase": "I really respect you for that and being able to bounce back whenever something sad happens!",
+          "slot_type": "feeling",
+          "confidence": "high",
+          "reason": "The evidence contains a direct quote from Nate expressing his respect for Joanna's resilience, which is a clearer and more specific answer to the question about how Nate feels.",
+          "final_answer_postprocessed": "I really respect you for that and being able to bounce back whenever something sad happens!"
+        }
+      },
+      {
+        "qid": "conv-41-q119",
+        "category": 4,
+        "question": "What inspired John to join the marching event for veterans' rights?",
+        "gold": "Respect for the military and the desire to show support",
+        "base": "longstanding passion for veterans and their rights",
+        "overlay": "deep respect for the military",
+        "base_f1": 26.666666666666668,
+        "overlay_f1": 50.0,
+        "delta": 23.333333333333332,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "deep respect for the military",
+          "evidence_phrase": "driven by his respect for the military",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The phrase 'driven by his respect for the military' directly addresses the inspiration for John's participation in the marching event, making it a clearer and more precise answer than the base answer.",
+          "final_answer_postprocessed": "deep respect for the military"
+        }
+      },
+      {
+        "qid": "conv-41-q98",
+        "category": 4,
+        "question": "Why did Maria join a nearby church recently?",
+        "gold": "to feel closer to a community and her faith",
+        "base": "to feel closer to a community and her faith",
+        "overlay": "I wanted to feel closer to a community and my faith.",
+        "base_f1": 100.0,
+        "overlay_f1": 77.77777777777777,
+        "delta": -22.22222222222223,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "I wanted to feel closer to a community and my faith.",
+          "evidence_phrase": "I wanted to feel closer to a community and my faith.",
+          "slot_type": "reason",
+          "confidence": "high",
+          "reason": "The evidence provides a direct quote from Maria that clearly states her reason for joining the church, making it a better fit for the question.",
+          "final_answer_postprocessed": "I wanted to feel closer to a community and my faith."
+        }
+      },
+      {
+        "qid": "conv-49-q121",
+        "category": 4,
+        "question": "What advice did Evan give to Sam to avoid injuries while starting weightlifting?",
+        "gold": "Find a trainer",
+        "base": "start with good form and technique",
+        "overlay": "beginning with proper form and finding a trainer",
+        "base_f1": 0.0,
+        "overlay_f1": 22.222222222222225,
+        "delta": 22.222222222222225,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "beginning with proper form and finding a trainer",
+          "evidence_phrase": "Evan, who has been lifting weights for a year, offered encouragement and advice on beginning with proper form and finding a trainer.",
+          "slot_type": "advice",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to the advice Evan gave to Sam regarding avoiding injuries while starting weightlifting.",
+          "final_answer_postprocessed": "beginning with proper form and finding a trainer"
+        }
+      },
+      {
+        "qid": "conv-49-q146",
+        "category": 4,
+        "question": "What did Evan offer to share with Sam after talking about healthy snacks?",
+        "gold": "the recipes for cookies",
+        "base": "cookies and energy balls",
+        "overlay": "recipes for healthy snacks, including energy balls and cookies",
+        "base_f1": 28.571428571428577,
+        "overlay_f1": 50.0,
+        "delta": 21.428571428571423,
+        "decision": {
+          "should_replace": true,
+          "final_answer": "recipes for healthy snacks, including energy balls and cookies",
+          "evidence_phrase": "Evan offered to share recipes for healthy snacks, including energy balls and cookies",
+          "slot_type": "offer",
+          "confidence": "high",
+          "reason": "The evidence provides a clearer and more specific phrase directly related to what Evan offered to share with Sam.",
+          "final_answer_postprocessed": "recipes for healthy snacks, including energy balls and cookies"
+        }
+      }
+    ]
+  }
+}

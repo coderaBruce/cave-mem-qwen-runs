@@ -1,0 +1,36 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+  [10/103] elapsed=12s
+  [20/103] elapsed=22s
+  [30/103] elapsed=31s
+  [40/103] elapsed=42s
+  [50/103] elapsed=50s
+  [60/103] elapsed=61s
+  [70/103] elapsed=73s
+  [80/103] elapsed=80s
+  [90/103] elapsed=88s
+  [100/103] elapsed=94s
+  [103/103] elapsed=116s
+dataset=hotpotqa-eval_400  method=wide  model=gpt-4o-mini
+samples=103  questions=103  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/ours-hotpot-wide20
+reflection tokens: 657
+当前sum_tokens: 59886
+============================== reflection response ==============================
+{'text': '\n\n{\n  "enough": false\n}', 'json': {'enough': False}, 'response': {'id': 'chatcmpl-E667s8mMf05An42avgLCOLjkfnXG2', 'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None, 'message': {'content': '<think> \nThe REQUEST seeks to identify a gospel singer born in July with whom David Huntsinger has worked. The key pieces of information required to fully answer the REQUEST include:\n1. The name of a gospel singer born in July.\n2. Confirmation that David Huntsinger has worked with this singer.\n\nThe RESULT provides the name of Latice Crawford, a gospel singer born on July 22, 1982, and mentions that David Huntsinger has worked with many artists in the gospel genre. However, it does not explicitly state that he has worked with Latice Crawford. Therefore, while the RESULT includes a relevant singer and her birth date, it lacks the necessary confirmation of collaboration between Huntsinger and Crawford.\n\nThus, the information in RESULT is not sufficient to fully answer the REQUEST. \n</think>\n\n{\n  "enough": false\n}', 'refusal': None, 'role': 'assistant', 'annotations': [], 'audio': None, 'function_call': None, 'tool_calls': None}}], 'created': 1785122224, 'model': 'gpt-4o-mini-2024-07-18', 'object': 'chat.completion', 'moderation': None, 'service_tier': 'default', 'system_fingerprint': 'fp_73ac716e3e', 'usage': {'completion_tokens': 171, 'prompt_tokens': 486, 'total_tokens': 657, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cache_write_tokens': None, 'cached_tokens': 0}}}}
+
+
+[DEBUG] Reflection generate_prompt length: 2644 chars (~661 tokens)
+intergrate tokens: 54514
+当前sum_tokens: 125191
+[DEBUG] Reflection result.content length: 425 chars (~106 tokens)
+[DEBUG] Reflection check_prompt length: 2368 chars (~592 tokens)
+reflection tokens: 595
+当前sum_tokens: 112322
+============================== reflection response ==============================
+{'text': '\n{\n  "enough": true\n}', 'json': {'enough': True}, 'response': {'id': 'chatcmpl-E668iAhbMsoCnL5LWAJldYDlNyJhf', 'choices': [{'finish_reason': 'stop', 'index': 0, 'logprobs': None, 'message': {'content': '<think> \nThe REQUEST asks for the major city near Faith Lutheran Middle School and High School. The key information required is the identification of the major city in relation to the school. The RESULT provides that the school is located in Summerlin, Clark County, Nevada, and specifies that it serves the Las Vegas Valley, with Las Vegas being identified as the major city in the area. Since the RESULT clearly states that Las Vegas is the major city near the school, it contains all necessary information to answer the REQUEST fully. \n</think>\n{\n  "enough": true\n}', 'refusal': None, 'role': 'assistant', 'annotations': [], 'audio': None, 'function_call': None, 'tool_calls': None}}], 'created': 1785122276, 'model': 'gpt-4o-mini-2024-07-18', 'object': 'chat.completion', 'moderation': None, 'service_tier': 'default', 'system_fingerprint': 'fp_9899ea5f96', 'usage': {'completion_tokens': 117, 'prompt_tokens': 478, 'total_tokens': 595, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cache_write_tokens': None, 'cached_tokens': 0}}}}
+
+
+intergrate tokens: 42144
+当前sum_tokens: 46198
+[DEBUG] Reflection result.content length: 276 chars (~69 tokens)
+[DEBUG] Reflection check_prompt length: 2286 chars (~571 tokens)

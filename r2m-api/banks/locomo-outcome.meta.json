@@ -1,0 +1,12 @@
+{
+  "gam_run": "gam-locomo-4omini",
+  "exp_run": "r2mem-conv26-probe",
+  "samples": [
+    "conv-26"
+  ],
+  "tau": 0.0,
+  "n_questions": 152,
+  "mean_question_delta": -0.003062100451024451,
+  "n_measured": 274,
+  "n_kept": 93
+}

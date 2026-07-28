@@ -1,0 +1,16 @@
+/Users/xinyu.li/Documents/research1/R2M-official/gam/retriever/__init__.py:32: UserWarning: DenseRetriever not available (FlagEmbedding dependencies may be missing)
+  warnings.warn("DenseRetriever not available (FlagEmbedding dependencies may be missing)")
+  [10/103] elapsed=2s
+  [20/103] elapsed=3s
+  [30/103] elapsed=3s
+  [40/103] elapsed=4s
+  [50/103] elapsed=5s
+  [60/103] elapsed=5s
+  [70/103] elapsed=7s
+  [80/103] elapsed=7s
+  [90/103] elapsed=8s
+  [100/103] elapsed=8s
+  [103/103] elapsed=8s
+dataset=hotpotqa-eval_400  method=gam  model=gpt-4o-mini
+samples=103  questions=103  outdir=/Users/xinyu.li/Documents/research1/r2m-api/results/ours-hotpot-shots
+answer-style shots per category: {"None": 8}

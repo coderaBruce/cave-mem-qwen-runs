@@ -1,0 +1,1550 @@
+[
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Caroline go to the LGBTQ support group?",
+    "situation": "single_fact",
+    "summary": "The trace involves a question about the date Caroline attended an LGBTQ support group, with a plan that specifies the need for a specific date and selects 'page_index' as the retrieval tool for accurate information.",
+    "experience": "IF the question requires a specific date or time frame for an event THEN identify the precise date as an info_need and use 'page_index' for targeted retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What specific date did Melanie paint the lake sunrise last year? In which month did Melanie paint the lake sunrise last year?",
+    "situation": "multi-fact query requiring specific temporal details",
+    "summary": "The trace outlines a plan to retrieve the specific date and month Melanie painted the lake sunrise last year, with info_needs that mirror the question and a tool selection that includes keywords and page indices.",
+    "experience": "IF the question involves retrieving specific dates or time-related information THEN diversify the info_needs by rephrasing and expanding the scope, and incorporate vector queries alongside keywords to enhance retrieval effectiveness.",
+    "score": 4,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 1,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What specific degree or certification in counseling or mental health is Caroline considering pursuing? Are there particular universities or programs that Caroline is interested in for her education? How does Caroline plan to integrate her interests in art and music into her educational pursuits? Has Caroline expressed any interest in additional fields outside of counseling and mental health that relate to her experiences? What workshops or conferences has Caroline attended that have specifically influenced her educational direction?",
+    "situation": "Multi-entity query",
+    "summary": "The trace outlines a detailed plan to address a multi-faceted question regarding Caroline's educational interests in counseling and mental health, including specific degrees, universities, integration of art and music, additional interests, and influential workshops.",
+    "experience": "IF a question seeks to explore multiple aspects of a person's educational interests and influences THEN identify distinct info_needs and select a combination of keyword, vector, and page_index tools for effective and comprehensive retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie run a charity race?",
+    "situation": "Time-related query seeking specific details about an event involving a single entity.",
+    "summary": "The trace addresses the question of when Melanie ran a charity race and includes a plan that outlines specific information needs and selected retrieval tools.",
+    "experience": "IF the question seeks specific details about an event related to an entity THEN identify concrete sub-questions about the event's timing and context, and select keyword and page_index tools for retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What specific dates in next month is Melanie planning to go camping?",
+    "situation": "time-related query",
+    "summary": "The trace involves a question about specific camping dates for Melanie next month, with a plan that outlines redundant info_needs and an excessive selection of retrieval tools.",
+    "experience": "IF the question involves identifying specific dates or schedules THEN simplify info_needs to focus on the core inquiry and select a single, effective retrieval tool.",
+    "score": 4,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 1,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What specific date or week in next month is Melanie planning to go camping?",
+    "situation": "Time-related query seeking specific information about a person's plans.",
+    "summary": "The trace involves a question about the specific date or week Melanie plans to go camping, with a retrieval plan that includes redundant info_needs and an inefficient selection of tools.",
+    "experience": "IF a question seeks specific timing or scheduling information THEN prioritize evaluating existing knowledge before formulating detailed info_needs and selecting retrieval tools.",
+    "score": 4,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 1,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What is Caroline's relationship status?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question about Caroline's relationship status and outlines a retrieval plan that includes specific info_needs, selected tools, and a collection of keywords and vector queries for effective information gathering.",
+    "experience": "IF the question seeks to clarify the current status or personal details about an individual THEN identify specific sub-questions to cover both current circumstances and expressed sentiments, and select a combination of keyword searches for exact matches and vector queries for broader context.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How long has Caroline had her current group of friends for?",
+    "situation": "Time-related query requiring information about the duration of relationships among multiple entities.",
+    "summary": "The trace addresses the question of how long Caroline has had her current group of friends by outlining a plan that includes distinct info needs about the duration and formation of these friendships, along with a well-chosen set of retrieval tools.",
+    "experience": "IF a question seeks to understand the duration or timeline of relationships among entities THEN construct distinct info needs related to both the duration and formation of those relationships, and select retrieval tools that include both keyword and vector strategies for comprehensive coverage.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Where did Caroline move from four years ago?",
+    "situation": "single_fact",
+    "summary": "The trace outlines a retrieval plan for the question 'Where did Caroline move from four years ago?', detailing info_needs that clarify the location of her past residence and a selection of retrieval tools including keywords and vector queries.",
+    "experience": "IF the question requires identifying a specific past location related to an individual THEN construct info_needs that clarify the temporal context and previous residence while selecting keyword and vector tools for precise and contextual retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What career path has Caroline decided to persue?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question about Caroline's chosen career path, outlining a retrieval plan that includes specific info_needs related to her decision and influences, along with a selection of appropriate tools for information retrieval.",
+    "experience": "IF the question involves understanding a person's decision-making process regarding a career path THEN define specific info_needs related to the decision and influences, and select both keyword and vector tools for effective retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What are the specific dates of the transgender conference that Caroline is attending this month? Where is the transgender conference being held? What is the agenda or schedule for the transgender conference? Is Caroline attending the transgender conference alone or with others? What specific topics related to advocacy is Caroline interested in learning about at the conference?",
+    "situation": "Multi-faceted query requiring detailed information across several aspects of an event.",
+    "summary": "The trace involves a multi-part question about a transgender conference that Caroline is attending, including inquiries about dates, location, agenda, attendance, and specific advocacy interests. The planning plan includes a list of info needs and selected tools for retrieval but suffers from redundancy and inefficiency.",
+    "experience": "IF a query involves multiple interconnected details about an event THEN refine info needs to focus on the most critical details first, reducing redundancy and ensuring efficient tool selection.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What are the specific dates of the transgender conference that Caroline is attending this month? Where is the transgender conference being held? What is the agenda or schedule for the transgender conference? Is Caroline attending the transgender conference alone or with others? What specific topics related to advocacy is Caroline interested in learning about at the conference?",
+    "situation": "Multi-entity query with time-related and preference aspects.",
+    "summary": "The trace outlines a planning retrieval for a question about a transgender conference that Caroline is attending, detailing various info needs and selected tools for retrieval. The plan includes redundant queries and lacks focus on specific details.",
+    "experience": "IF a query involves multiple related entities and specific time details THEN prioritize the most critical info need (e.g., specific dates) and streamline redundant queries to enhance retrieval efficiency.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What specific campgrounds or locations in the mountains has Melanie camped at? What specific beach location did Melanie camp at with her kids?",
+    "situation": "Multi-entity query seeking specific locations associated with a subject.",
+    "summary": "The trace outlines a plan to answer a question about specific campgrounds and beach locations where Melanie has camped, detailing necessary information needs and a retrieval strategy that includes keywords, vector queries, and page indices.",
+    "experience": "IF a query requires identification of multiple specific locations related to a subject THEN construct distinct info_needs for each location and select a combination of keyword and vector retrieval strategies to ensure comprehensive coverage.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie go to the museum?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question 'When did Melanie go to the museum?' with a plan that includes identifying specific details about the visit and selecting tools like keywords and page index for effective retrieval.",
+    "experience": "IF the question seeks a specific date or time related to an event or entity THEN identify concrete sub-questions and select keyword and page index tools for precise retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What was the exact date of Caroline's picnic last week?",
+    "situation": "single_fact with contextual understanding",
+    "summary": "The trace addresses the question of the exact date of Caroline's picnic last week by outlining a retrieval plan that includes specific info needs, tool selection, and keyword collection for effective data gathering.",
+    "experience": "IF a question requires a specific date or event detail from a recent timeframe THEN construct info_needs that include direct queries about the event, related activities, and potential mentions in prior communications, while selecting tools that combine keyword searches for precision and vector queries for broader context.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What does Melanie do to destress?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of what Melanie does to destress, with a plan that identifies specific activities and emotional reflections as info_needs, and selects keyword and page_index tools for effective retrieval.",
+    "experience": "IF the question seeks to understand behaviors or activities related to emotional well-being THEN define precise info_needs that explore both actions and emotional context, and select retrieval tools that facilitate specific and contextual information gathering.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Caroline go to the LGBTQ conference?",
+    "situation": "Time-related query seeking specific event attendance details.",
+    "summary": "The trace involves a question regarding the date when Caroline attended the LGBTQ conference, and the plan outlines specific info needs, selected tools, and keywords for effective retrieval.",
+    "experience": "IF the query seeks specific timing details about an event related to an individual THEN define clear info needs focused on date and context, and select keyword and page index tools for precise retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "When did Melanie read the book \"nothing is impossible\"?",
+    "situation": "Time-related query seeking a specific event associated with an individual and a title.",
+    "summary": "The trace addresses a question about when Melanie read the book 'Nothing is Impossible' and outlines a plan that includes identifying the date and mentions of the book in MEMORY, though it suffers from redundancy and lack of specificity.",
+    "experience": "IF the question involves identifying a specific date related to an event or action, THEN ensure info_needs are distinct and focused on the exact date, using targeted keyword queries and possibly vector queries for context.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie go to the pottery workshop?",
+    "situation": "Time-related query requiring specific details about an event associated with an individual.",
+    "summary": "The trace focuses on the question about when Melanie attended a pottery workshop, with a plan that outlines necessary information needs and retrieval strategies to obtain the date and details of her experience.",
+    "experience": "IF a question seeks to determine the date of an event related to a specific individual THEN identify concrete sub-questions about the date and experience, and select keyword searches along with relevant page indices for efficient retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie go camping in June?",
+    "situation": "Time-related query seeking specific dates associated with an event involving multiple entities.",
+    "summary": "The trace analyzes the question 'When did Melanie go camping in June?' and outlines a plan that includes identifying specific dates and relevant details about the camping trip, employing keyword searches and page indices for retrieval.",
+    "experience": "IF the question seeks specific temporal details about an event involving multiple entities THEN ensure info_needs explicitly include precise date inquiries and select retrieval tools that align with these needs.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 2,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What specific date in June 2023 did Melanie go camping with her family?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of identifying the specific date in June 2023 when Melanie went camping with her family, outlining a plan that includes targeted info_needs and appropriate retrieval tools.",
+    "experience": "IF the question requires identifying a specific date related to an event involving an individual THEN construct info_needs that focus on the event's details and select retrieval tools that include keyword searches and relevant page indices.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What was the exact date of the pride parade that Caroline attended last Friday? What was the exact date of the pride parade that Caroline attended a few weeks prior?",
+    "situation": "multi-entity query with time-specific requirements",
+    "summary": "The question seeks the exact dates of pride parades attended by Caroline on two specific occasions, and the plan outlines precise info needs along with suitable retrieval tools to find that information.",
+    "experience": "IF the question involves retrieving specific dates related to multiple events or entities THEN define clear info_needs for each date and select tools that include keyword searches and page indices for accurate retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "In what ways is Caroline participating in the LGBTQ community?",
+    "situation": "Multi-entity query seeking to understand various aspects of an individual's involvement in a community or group.",
+    "summary": "The trace outlines a plan to investigate how Caroline participates in the LGBTQ community, detailing specific info needs related to her activities, support for youth, and the impact of her involvement. The plan includes a mix of keyword and vector-based retrieval strategies to gather comprehensive information.",
+    "experience": "IF a query seeks to explore the multifaceted participation of an individual in a community THEN design info_needs that cover distinct aspects of involvement while minimizing redundancy, and select a mix of keyword and vector tools for efficient information retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "How many times has Melanie gone to the beach in 2023?",
+    "situation": "single_fact query",
+    "summary": "The trace analyzes the question 'How many times has Melanie gone to the beach in 2023?' and proposes a retrieval plan that includes several info needs and a selection of tools aimed at gathering relevant data.",
+    "experience": "IF the question seeks a specific count or frequency of events THEN construct info_needs that explicitly request numerical data and ensure tool selection prioritizes efficiency in retrieving distinct and relevant information.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "How many times has Melanie gone to the beach in 2023? Is there a record or log of Melanie's beach visits in 2023?",
+    "situation": "Time-related query focused on obtaining a specific count of occurrences and verifying the existence of associated records.",
+    "summary": "The trace details a planning attempt for the question regarding the number of times Melanie visited the beach in 2023 and the existence of a record of those visits. The plan includes multiple info needs and a selection of retrieval tools.",
+    "experience": "IF a query seeks to ascertain a specific count of occurrences over a defined time frame THEN streamline info_needs to focus on the count and existence of records, using targeted keyword retrieval and minimizing redundancy.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "How many times has Melanie gone to the beach in 2023?",
+    "situation": "time-related query focusing on frequency of events",
+    "summary": "The trace addresses the question of how many times Melanie went to the beach in 2023, proposing a plan with multiple info_needs and a mix of retrieval tools, but suffers from redundancy and a lack of focus on the specific count requested.",
+    "experience": "IF the question seeks a specific count of occurrences within a time period THEN prioritize info_needs that directly quantify the events and select tools that efficiently retrieve exact data without redundancy.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Would Melanie be more interested in going to a national park or a theme park?",
+    "situation": "Multi-entity query",
+    "summary": "The trace addresses the question of whether Melanie would prefer a national park or a theme park by outlining a plan that includes various info needs related to her interests, along with a selection of retrieval tools.",
+    "experience": "IF a query involves preferences between two distinct categories of activities THEN consolidate overlapping info_needs and select a diverse range of retrieval tools to ensure comprehensive coverage.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When is Melanie's daughter's birthday?",
+    "situation": "single_fact",
+    "summary": "The question seeks to determine the date of Melanie's daughter's birthday, and the plan outlines a retrieval strategy that includes identifying specific info needs and selecting appropriate tools for effective information retrieval.",
+    "experience": "IF a query seeks a specific date related to an individual or event THEN identify precise info_needs and utilize keyword searches along with relevant page indices for efficient retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Would Melanie be considered an ally to the transgender community?",
+    "situation": "multi-entity query",
+    "summary": "This trace addresses the question of whether Melanie is considered an ally to the transgender community by outlining a retrieval plan that includes specific info needs about her actions and statements, along with a selection of appropriate tools for information retrieval.",
+    "experience": "IF a question seeks to understand an individual's support or stance on a community issue THEN identify specific actions, statements, and relationships related to that individual, utilizing both keyword searches for exact information and vector queries for broader context.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "When did Caroline and Melanie go to a pride fesetival together?",
+    "situation": "Multi-entity and time-related query requiring specific details about participation and experiences.",
+    "summary": "The trace outlines a retrieval plan for the question regarding when Caroline and Melanie attended a pride festival together, detailing the info_needs, tools, and strategies for keyword and vector queries.",
+    "experience": "IF the question involves multiple entities with specific participation details THEN ensure all entities are covered in info_needs and avoid redundancy in sub-questions.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What would Caroline's political leaning likely be?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of Caroline's likely political leaning by outlining a plan that includes various info needs related to her beliefs, actions, and community involvement, while utilizing a combination of retrieval tools.",
+    "experience": "IF the question seeks to determine a person's beliefs or affiliations based on various aspects of their life THEN identify and merge overlapping info needs to streamline the retrieval plan while selecting appropriate tools for both semantic and specific retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What are Melanie's pets' names?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question about the names of Melanie's pets by outlining a plan that includes identifying the specific information needed and selecting appropriate retrieval tools.",
+    "experience": "IF the question seeks to identify multiple related entities or attributes of a single subject THEN specify concrete sub-questions and utilize targeted keywords along with known indices for efficient retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Caroline encounter people on a hike and have a negative experience?",
+    "situation": "multi-entity query",
+    "summary": "The trace outlines a retrieval plan for the question regarding when Caroline had a negative experience with people during a hike, identifying key information needs and selecting appropriate tools for retrieval.",
+    "experience": "IF the question involves understanding a negative experience related to a specific event or interaction THEN identify concrete sub-questions regarding the nature of the experience and context, and utilize a combination of vector queries for semantic understanding and page indices for targeted retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Does Caroline identify with a specific religion or faith? What religious practices, if any, does Caroline engage in? How does Caroline view spirituality in relation to her identity? Has Caroline mentioned any religious beliefs in her advocacy work? What role, if any, does religion play in Caroline's life and community involvement?",
+    "situation": "multi-entity query",
+    "summary": "The Trace addresses a multi-faceted question regarding Caroline's religious identity, practices, and beliefs, with a plan that outlines specific info_needs and a diverse selection of retrieval tools to gather comprehensive information.",
+    "experience": "IF a question seeks to explore multiple dimensions of an individual's identity or beliefs THEN define clear info_needs that cover each aspect and select a combination of keyword and vector tools for effective retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Does Caroline identify with any specific religion or spiritual belief system? What are Caroline's views on religion in general, particularly after her experiences with religious conservatives? Has Caroline participated in any religious practices or rituals? Does Caroline consider herself spiritual, even if she does not identify with a specific religion? How does Caroline's family heritage influence her views on faith and religion?",
+    "situation": "Multi-entity query involving complex beliefs and personal experiences related to religion and spirituality.",
+    "summary": "The trace outlines a retrieval plan to answer a multi-part question about Caroline's religious identity, beliefs, and practices, detailing specific info_needs, selected tools, and keyword/phrase collections for effective information retrieval.",
+    "experience": "IF a question encompasses multiple aspects of personal beliefs and experiences related to a subject THEN break down the question into specific info_needs and select a diverse set of retrieval tools for comprehensive coverage.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What instruments does Melanie play?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of what instruments Melanie plays, outlining a plan that includes specific info_needs, a selection of keyword tools, and page indices for retrieval.",
+    "experience": "IF the query seeks information about multiple related entities or attributes THEN identify specific sub-questions to cover all aspects and select a combination of keyword searches and page indices for effective retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Has Melanie seen any other musical artists or bands in concert besides Matt Patterson? What are the names of all the musical artists or bands Melanie has seen? How many concerts has Melanie attended in total? Can we get details about the concerts Melanie attended, such as dates or locations? Has Melanie shared her experiences or opinions about other artists or bands she has seen?",
+    "situation": "Multi-entity query seeking detailed personal experiences and records related to attendance at events.",
+    "summary": "The trace addresses a comprehensive inquiry about Melanie's concert attendance, including specific artists, total concert count, details about the concerts, and her opinions. The plan outlines a detailed retrieval strategy with clearly defined info_needs and tool selections.",
+    "experience": "IF a question involves gathering comprehensive personal experience data across multiple events or entities THEN identify distinct info_needs for each aspect of the query and select appropriate retrieval tools that include both targeted keywords and broader semantic queries.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What is the specific date of the talent show at Caroline's youth center next month? What time will the talent show at Caroline's youth center start? Where within the youth center will the talent show be held? Are there any requirements for kids to participate in the talent show? Will there be any judges or prizes for the talent show?",
+    "situation": "Multi-entity query requiring specific details across different aspects of an event.",
+    "summary": "The trace outlines a question about the specifics of a talent show at a youth center, detailing a plan that includes multiple info_needs and a selection of retrieval tools aimed at gathering relevant information.",
+    "experience": "IF a query involves multiple related details about an event THEN consolidate info_needs to focus on the most critical missing information and reduce redundancy for efficient retrieval.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What is the specific date of the talent show at Caroline's youth center next month? What time will the talent show at Caroline's youth center start? Where within the youth center will the talent show be held? Are there any requirements for kids to participate in the talent show? Will there be any judges or prizes for the talent show?",
+    "situation": "Multi-faceted query requiring specific details across different dimensions such as date, time, location, and participation criteria.",
+    "summary": "The trace outlines a planning retrieval for a question about the details of a talent show at a youth center, detailing various information needs and a retrieval strategy that includes using page indexing, keywords, and vector queries.",
+    "experience": "IF a query involves multiple specific details across different categories THEN prioritize identifying the most critical missing information and streamline the info_needs to avoid redundancy.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Caroline go biking with friends?",
+    "situation": "Time-related query seeking specific details about an event involving multiple entities.",
+    "summary": "The trace addresses the question about when Caroline went biking with friends by outlining a plan that identifies necessary information and selects appropriate retrieval tools.",
+    "experience": "IF the query seeks specific details about an event involving a person and a timeframe THEN identify precise info_needs and select a combination of keyword searches and page indices for efficient retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What book did Melanie read from Caroline's suggestion?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of which book Melanie read based on Caroline's suggestion, outlining a plan that includes specific info needs and appropriate retrieval tools.",
+    "experience": "IF the question seeks to identify a specific recommendation or action taken by one entity based on another's suggestion THEN construct info_needs that clarify the suggestion and the recipient's response, and select tools that allow for precise retrieval of relevant entities and their interactions.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "When did Melanie's friend adopt a child?",
+    "situation": "Time-related query requiring a specific date or timeframe.",
+    "summary": "The trace concerns the question about when Melanie's friend adopted a child and outlines a plan with various info_needs and tool selections aimed at retrieving relevant information.",
+    "experience": "IF the question is focused on a specific date or event THEN prioritize info_needs that directly address the date and reduce extraneous details to improve retrieval efficiency.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie's family go on a roadtrip?",
+    "situation": "Time-related query seeking specific details about an event involving multiple entities.",
+    "summary": "The trace addresses the question about when Melanie's family went on a road trip by outlining a plan that includes specific info needs regarding the date and experiences, and selects 'page_index' as the retrieval tool.",
+    "experience": "IF the question seeks specific details about an event involving time and experiences THEN identify concise info needs and select 'page_index' as the retrieval strategy.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 2,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Would Melanie go on another roadtrip soon?",
+    "situation": "multi-entity query with temporal considerations regarding future intentions or plans.",
+    "summary": "The trace focuses on the question of whether Melanie will go on another road trip soon, outlining a plan that includes several info_needs related to her travel intentions and feelings, along with a diverse selection of retrieval tools.",
+    "experience": "IF a query involves assessing future intentions or plans of an individual THEN consolidate similar info_needs to ensure comprehensive coverage while minimizing redundancy, and select a mix of keyword and vector tools for effective retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What items has Melanie bought?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of what items Melanie has bought, detailing a plan that includes specific info needs and a strategic selection of retrieval tools to gather relevant information.",
+    "experience": "IF the question seeks to identify multiple items or entities associated with a specific individual THEN construct info_needs that clarify the desired specifics and utilize a combination of keyword and vector retrieval strategies.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Caroline pass the adoption interview?",
+    "situation": "single_fact",
+    "summary": "The trace involves a question about the date Caroline passed the adoption interview, with a plan that includes info needs focused on the date and her experience, using 'page_index' for retrieval.",
+    "experience": "IF the question seeks a specific date or event related to an individual THEN design info_needs to focus strictly on the date and use 'page_index' for targeted retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 2,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "When did Melanie buy the figurines?",
+    "situation": "single_fact query requiring specific date information about an event related to a person.",
+    "summary": "The trace involves the question 'When did Melanie buy the figurines?' and outlines a retrieval plan that identifies key information needs and selects appropriate tools for gathering the necessary data.",
+    "experience": "IF a query seeks a specific date or timeframe related to an event involving an individual THEN construct info_needs that clarify the context and date, and select tools that combine keyword searches for exact matches and vector queries for broader semantic understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What did the charity race raise awareness for?",
+    "situation": "single_fact",
+    "summary": "The trace centers on the question about what the charity race raised awareness for, with a plan that includes identifying specific causes and contextual details, while utilizing keyword searches and page indexing for retrieval.",
+    "experience": "IF a question seeks to clarify the purpose or cause behind an event or initiative THEN construct info_needs that specify the exact cause and contextual details, and select tools that include both keyword searches for precise terms and page indexing for comprehensive context.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What did Melanie realize after the charity race?",
+    "situation": "single_fact",
+    "summary": "The trace involves a question about Melanie's realizations after a charity race, with a plan that identifies specific information needs and selects appropriate tools for retrieval.",
+    "experience": "IF the question seeks a specific realization or insight from an individual after an event THEN identify precise information needs related to thoughts and feelings, and utilize page indexing for targeted retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What does Melanie think about Caroline's decision to adopt?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of Melanie's thoughts on Caroline's adoption decision, outlining a plan that includes specific info_needs, selected retrieval tools, and a keyword collection for effective information gathering.",
+    "experience": "IF a query seeks opinions or feelings about decisions involving multiple parties THEN consolidate info_needs to focus on key sentiments while using a mix of keyword and vector tools for comprehensive retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How long have Mel and her husband been married?",
+    "situation": "multi-entity query with time-related aspects",
+    "summary": "The trace involves a question about the duration of Mel and her husband's marriage, with a plan that includes info_needs focused on determining both the duration and the wedding date, utilizing keyword, vector, and page_index retrieval strategies.",
+    "experience": "IF the question seeks to determine the duration of a relationship involving multiple entities THEN consolidate info_needs to focus on distinct, non-overlapping aspects while selecting both keyword and vector retrieval strategies for comprehensive coverage.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What does Caroline's necklace symbolize?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of what Caroline's necklace symbolizes, with a plan that includes identifying specific attributes and meanings, utilizing a page index for direct retrieval, and employing a vector query for broader semantic context.",
+    "experience": "IF the question seeks to understand the symbolism or meaning of a specific entity THEN identify concrete sub-questions related to that symbolism and select retrieval tools that provide both direct references and broader contextual understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What country is Caroline's grandma from?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question about the country of origin of Caroline's grandma, with a plan that includes specific info needs and the selection of keyword and page index tools for retrieval.",
+    "experience": "IF the question seeks to identify the origin or background of a specific individual THEN construct info_needs focused on familial and heritage aspects, and select keyword and page_index tools for targeted retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What is Melanie's hand-painted bowl a reminder of?",
+    "situation": "multi-entity query",
+    "summary": "The question asks about the significance of Melanie's hand-painted bowl, and the plan outlines specific information needs, retrieval tools, and strategies to comprehensively gather relevant insights regarding its symbolism and personal meaning.",
+    "experience": "IF the question seeks to understand the significance or associations of a specific object or concept THEN break down the inquiry into detailed sub-questions, utilize a combination of keyword and vector retrieval strategies, and reference known content indices for comprehensive information gathering.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What workshop did Caroline attend recently?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of which workshop Caroline attended recently, with a plan that identifies specific information needs and selects 'page_index' as the retrieval tool.",
+    "experience": "IF the question seeks to identify a specific event or instance related to an individual THEN construct info_needs focusing on the details of that event and select page_index for targeted retrieval of relevant content.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What motivated Caroline to pursue counseling?",
+    "situation": "multi-entity query",
+    "summary": "The Trace addresses the question of what motivated Caroline to pursue counseling, outlining a plan that includes various info_needs related to her experiences and influences, along with selected retrieval tools for efficient information gathering.",
+    "experience": "IF the question seeks to understand motivations or influences behind a personal decision THEN design info_needs that explore distinct aspects of the motivation while ensuring no redundancy, and select retrieval tools that include both keyword and semantic strategies to cover the information comprehensively.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What was Melanie's favorite book from her childhood?",
+    "situation": "single_fact",
+    "summary": "The trace focuses on the question regarding Melanie's favorite childhood book and outlines a retrieval plan that includes specific info_needs, selected tools, and keyword collections aimed at uncovering this information.",
+    "experience": "IF the question seeks a specific preference or memory from an individual THEN consolidate info_needs to focus on unique aspects of that preference while selecting both keyword and vector tools for comprehensive retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What book did Caroline recommend to Melanie?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of which book Caroline recommended to Melanie, with a plan that outlines specific information needs and selects suitable retrieval tools including keywords and page indexing.",
+    "experience": "IF the question seeks to identify a specific recommendation or suggestion made by one entity to another THEN define clear info_needs that focus on the recommendation details and select both keyword and page_index tools for precise and contextual retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What did Caroline take away from the book \"Becoming Nicole\"?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of what insights Caroline gained from the book 'Becoming Nicole' by outlining a plan that includes specific info_needs and a well-suited retrieval strategy.",
+    "experience": "IF the question seeks insights or personal reflections from a specific source THEN identify concrete sub-questions that focus on lessons learned and select a combination of keyword and vector tools for effective retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What are the new shoes that Melanie got used for?",
+    "situation": "multi-entity query",
+    "summary": "The trace analyzes the question about the uses of Melanie's new shoes and outlines a retrieval plan that includes specific info needs and appropriate tools for effective information gathering.",
+    "experience": "IF a query involves understanding the uses or purposes of a specific item or entity THEN identify distinct info needs related to the type and function of that item and select both keyword and vector tools for retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What is Melanie's reason for getting into running?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of Melanie's motivation for running by outlining a plan that identifies specific info_needs related to her experiences and mental health, while utilizing a strategic mix of retrieval tools.",
+    "experience": "IF a question seeks to understand an individual's motivations or connections to broader themes (like health or self-care) THEN define specific info_needs that explore personal experiences and utilize a combination of keyword, vector, and page_index tools for comprehensive retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What does Melanie say running has been great for?",
+    "situation": "multi-entity query",
+    "summary": "The trace outlines a retrieval plan for the question about the benefits of running as described by Melanie, detailing specific information needs and the tools to be used for effective retrieval.",
+    "experience": "IF the question seeks to understand the associations or benefits attributed to a practice by a specific individual THEN identify concrete sub-questions that clarify the specific aspects of the practice and select retrieval tools that align with these needs to ensure efficient and focused information gathering.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What creative project do Mel and her kids do together besides pottery?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question of what creative projects Mel and her kids do together besides pottery, with a plan that includes distinct info needs and a well-chosen set of retrieval tools.",
+    "experience": "IF a question seeks to identify multiple activities or projects related to a specific subject, THEN construct info_needs that specify distinct activities and select retrieval tools that encompass both keyword searches for specific terms and vector queries for broader contextual understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What do sunflowers represent according to Caroline?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of what sunflowers represent according to Caroline, with a plan that includes specific info_needs and a well-chosen set of retrieval tools.",
+    "experience": "IF the question seeks to understand the specific representation or symbolism attributed to an entity by an individual THEN construct info_needs that focus on the symbolic meaning and select tools that include keyword searches for precise terms and vector queries for broader semantic understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How often does Melanie go to the beach with her kids?",
+    "situation": "Time-related query seeking frequency of activities involving multiple entities (Melanie and her kids).",
+    "summary": "This trace addresses the question of how often Melanie goes to the beach with her kids, outlining a plan that includes specific info needs and a selection of retrieval tools to gather relevant information.",
+    "experience": "IF a question seeks to determine the frequency of activities involving multiple entities THEN construct info_needs that specify the activity and the involved parties, and select tools that include both keyword searches for exact matches and vector queries for broader contextual understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What did Melanie and her family see during their camping trip last year?",
+    "situation": "multi-entity query",
+    "summary": "The trace addresses the question regarding what Melanie and her family saw during their camping trip last year, outlining a plan that includes specific information needs and a selection of retrieval tools.",
+    "experience": "IF the question requires detailed accounts of experiences or observations from a specific time period THEN identify explicit information needs regarding the events and select appropriate retrieval tools such as keyword searches and page indices.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How did Melanie feel while watching the meteor shower?",
+    "situation": "multi-faceted emotional inquiry",
+    "summary": "The Trace addresses the question of how Melanie felt while watching the meteor shower, outlining a plan that includes distinct info needs about her emotions and context, along with a retrieval strategy that employs vector queries and a page index.",
+    "experience": "IF a question seeks to understand emotional responses in a specific context THEN design info_needs that explore distinct emotional states, contextual factors, and reflective thoughts, while selecting tools that combine semantic retrieval with targeted indexing.",
+    "score": 11,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Whose birthday did Melanie celebrate recently?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question of whose birthday Melanie celebrated recently, outlining a plan that includes identifying the individual and gathering event details, with a strategy that incorporates keyword searches and page indexing.",
+    "experience": "IF the question seeks to identify a specific individual or event related to a person THEN construct info_needs focusing on the identity of the individual and context of the event, and select tools that include keyword searches for precise retrieval and page indices for comprehensive information.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "Who performed at the concert at Melanie's daughter's birthday?",
+    "situation": "single_fact",
+    "summary": "The trace involves a question about who performed at a concert for Melanie's daughter's birthday, with a retrieval plan that includes identifying the performer's name and utilizing a page index for efficient information retrieval.",
+    "experience": "IF the question requires identifying a specific entity or fact from a known source THEN focus on constructing a precise info_need and select 'page_index' as the retrieval strategy.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What pet does Caroline have?",
+    "situation": "single_fact",
+    "summary": "The trace addresses the question 'What pet does Caroline have?' by outlining a plan that includes specific information needs regarding the type and name of Caroline's pet, and selects appropriate retrieval tools.",
+    "experience": "IF the question requires identifying specific attributes or entities about a subject THEN design info_needs that focus on the attributes and select retrieval tools that include keyword-based searches and relevant page indices.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What pets does Melanie have?",
+    "situation": "multi-entity query",
+    "summary": "The trace involves a question about the pets owned by Melanie, with a retrieval plan that includes distinct info needs, appropriate tools for keyword searches and page indexing, and a targeted keyword collection.",
+    "experience": "IF the question involves identifying multiple related entities or attributes THEN construct distinct info_needs that cover various aspects of the entities, and select appropriate retrieval tools such as keyword searches and page indexing for efficient information gathering.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What did Caroline make for a local church?",
+    "situation": "single_fact",
+    "summary": "The Trace addresses the question, 'What did Caroline make for a local church?' and outlines a plan that includes identifying specific contributions, selecting appropriate retrieval tools, and focusing on relevant keywords for effective information retrieval.",
+    "experience": "IF the query seeks a specific contribution or item related to an individual or event THEN construct clear info_needs that pinpoint the exact details required and select keyword and page_index tools for targeted retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What did Caroline find in her neighborhood during her walk?",
+    "situation": "multi-entity query",
+    "summary": "The trace involves a question about what Caroline found during her neighborhood walk, with a plan that outlines vague info needs and limited tool selection focused on page indexing.",
+    "experience": "IF the question involves discovering multiple specific items or experiences from a narrative context THEN design more precise info needs and employ a combination of retrieval strategies such as keyword searches for specifics and vector queries for contextual understanding.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 1,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What specific items or observations did Caroline find during her walk in her neighborhood? Were there any notable or unusual findings that stood out to Caroline during her walk? Did Caroline encounter any people or animals during her walk, and if so, what were they? What was the general condition of the neighborhood during Caroline's walk (e.g., clean, littered, busy)? Did Caroline take any photographs or notes about her findings during her walk?",
+    "situation": "Multi-entity query seeking detailed observations and experiences related to a personal activity.",
+    "summary": "The trace analyzes a question about Caroline's observations during her neighborhood walk and outlines a retrieval plan that includes comprehensive info needs and a diverse tool selection strategy.",
+    "experience": "IF a question seeks detailed observations about a personal experience involving multiple entities and aspects THEN create comprehensive info needs that cover distinct facets of the experience while minimizing redundancy, and employ a mixed tool selection strategy for effective retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "Who are some other modern music artists that Melanie is a fan of? What specific genres or styles of modern music does Melanie enjoy? Does Melanie have any favorite songs or albums from the artists she likes?",
+    "situation": "multi-entity query",
+    "summary": "The trace outlines a plan to answer a question about Melanie's music preferences, including her favorite artists, genres, and songs. The plan includes redundant info_needs and poorly aligned tool selections.",
+    "experience": "IF a query involves multiple related entities or preferences THEN refine info_needs to focus on unique aspects and select diverse retrieval tools to minimize redundancy.",
+    "score": 4,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 1,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "How long has Melanie been creating art?",
+    "situation": "time-related query",
+    "summary": "The trace involves a question about the duration of art creation by an individual and outlines a plan that includes various info_needs and tool selections, though it suffers from redundancy and unnecessary details.",
+    "experience": "IF a question seeks to determine the duration of an activity THEN focus info_needs exclusively on the start date and select retrieval tools that directly address this temporal aspect.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What was the specific message or content of the precautionary sign that Melanie saw at the café?",
+    "situation": "single_fact",
+    "summary": "The trace involves a question regarding the specific content of a precautionary sign seen by Melanie at a café, with a retrieval plan that outlines a focused info need and employs keyword and vector tools for information extraction.",
+    "experience": "IF the question seeks specific content or details about an entity THEN design info_needs that are precise and non-redundant, and select both keyword and vector tools for effective retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 2,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What setback did Melanie face in October 2023?",
+    "situation": "Time-related query focusing on specific challenges or setbacks faced by an individual.",
+    "summary": "The trace addresses the question regarding the setback faced by Melanie in October 2023 and outlines a plan that includes specific info_needs, a selection of retrieval tools, and targeted keyword collections.",
+    "experience": "IF a query seeks to identify specific challenges or setbacks faced by an individual during a defined time frame THEN design info_needs that pinpoint exact events or issues and select tools that combine keyword searches for precision with vector queries for broader context.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What does Melanie do to keep herself busy during her pottery break?",
+    "situation": "Multi-entity query seeking diverse activities or interests associated with a person during a specific context.",
+    "summary": "The trace addresses the question about Melanie's activities during her pottery break by outlining a plan that includes specific info_needs, tool selections, and retrieval strategies.",
+    "experience": "IF a question seeks to uncover various activities or interests of an individual in a specific context THEN break down the question into distinct info_needs and select both page indexing for precise retrieval and vector queries for broader contextual understanding.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What is the title of the painting that Melanie showed to Caroline on October 13, 2023? What medium or technique did Melanie use to create the painting she showed to Caroline?",
+    "situation": "multi-entity query with specific temporal context",
+    "summary": "The trace involves a question about the title and medium of a painting shown by Melanie to Caroline on a specific date, with a planning strategy that includes redundant info_needs and a mix of retrieval tools.",
+    "experience": "IF a question involves multiple attributes of a single entity with a specific time reference THEN refine info_needs to eliminate redundancy and ensure precise targeting of the missing details while selecting appropriate retrieval tools.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "bad",
+    "condition": "What is the title of the painting that Melanie showed to Caroline on October 13, 2023? Did Melanie show Caroline the abstract painting on the same day, October 13, 2023, or at a different time?",
+    "situation": "multi-entity query with time-related aspects and specific attributes",
+    "summary": "The trace addresses a question regarding the title of a painting shown by Melanie to Caroline on a specific date and whether it was an abstract painting. The plan lists info_needs, tools, and keyword collections, but suffers from redundancy and lacks refinement in targeting specific details.",
+    "experience": "IF a query involves multiple entities and time-specific details THEN refine info_needs to target unique attributes or descriptions and utilize a mix of keyword and vector tools to avoid redundancy.",
+    "score": 5,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 1,
+        "Info Needs Non-Redundancy": 1,
+        "Tool–Info Alignment": 2,
+        "Planning Efficiency": 1
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What specific personal experiences influenced Caroline's creation of her artwork? How does Caroline describe her feelings about her drawing 'Embracing Identity'? What specific elements in her stained glass window represent her journey of growth and change? Can Caroline share any particular challenges she faced that are reflected in her art? What messages does Caroline hope to convey through her rainbow flag mural?",
+    "situation": "Multi-entity query seeking specific insights about an individual's experiences, feelings, and artistic expressions.",
+    "summary": "The trace outlines a detailed retrieval plan for a multi-faceted question regarding Caroline's artwork, specifying the necessary info_needs and selecting appropriate tools for effective information retrieval.",
+    "experience": "IF a question seeks detailed insights into an individual's experiences and feelings related to multiple artworks THEN construct precise info_needs for each aspect and select a combination of keyword, vector, and page index tools for comprehensive retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "What happened to Melanie's son on their road trip?",
+    "situation": "multi-faceted incident inquiry",
+    "summary": "The question asks about the incident involving Melanie's son during a road trip, and the plan includes distinct info_needs focusing on the incident, family reactions, and outcomes while utilizing a 'page_index' tool for retrieval.",
+    "experience": "IF a question involves a specific incident and its implications THEN design info_needs that cover distinct aspects of the incident while selecting 'page_index' for targeted retrieval.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 2,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How did Melanie feel about her family after the accident?",
+    "situation": "multi-faceted emotional inquiry about a person's feelings in relation to events and relationships",
+    "summary": "The trace outlines a retrieval plan for the question regarding Melanie's feelings about her family after an accident, detailing specific info_needs, selected tools, and keyword strategies.",
+    "experience": "IF a question seeks to explore a person's emotional responses to significant events THEN construct diverse info_needs that address specific feelings, impacts, and reflections while selecting appropriate tools like vector queries for nuanced understanding.",
+    "score": 11,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How did Melanie feel after the accident?",
+    "situation": "multi-faceted emotional inquiry",
+    "summary": "The question asks how Melanie felt after an accident, and the plan outlines the necessary information needs about her feelings and reflections, employing vector queries and page indexing for effective retrieval.",
+    "experience": "IF a question seeks to understand emotional responses and reflections after an event THEN identify specific feelings and broader impacts as info_needs, and employ vector queries alongside page indexing for thorough retrieval.",
+    "score": 12,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 3,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 3
+      }
+    }
+  },
+  {
+    "module": "Planning",
+    "quality": "good",
+    "condition": "How did Melanie feel about her family supporting her?",
+    "situation": "multi-entity query",
+    "summary": "The Trace addresses the question of how Melanie felt about her family's support, outlining a plan that includes specific info_needs, selected tools, and keyword collections to gather relevant information.",
+    "experience": "IF a query seeks to understand emotional responses related to support from multiple entities THEN consolidate overlapping info_needs for efficiency while ensuring comprehensive coverage and select both semantic and exact-match retrieval tools.",
+    "score": 10,
+    "source": "conv-26",
+    "extra": {
+      "rubrics": {
+        "Info Needs Coverage": 3,
+        "Info Needs Non-Redundancy": 2,
+        "Tool–Info Alignment": 3,
+        "Planning Efficiency": 2
+      }
+    }
+  }
+]
