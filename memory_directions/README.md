@@ -230,6 +230,9 @@ key is required.
 # one-time remote setup: Python deps + HotpotQA/NarrativeQA eval data
 bash memory_directions/scripts/prepare_qwen_remote.sh
 
+# if a previous setup used an incompatible Python/Torch stack, rebuild it
+RECREATE_VENV=1 bash memory_directions/scripts/prepare_qwen_remote.sh
+
 # terminal/tmux pane 1: start local Qwen server
 MODEL_NAME=Qwen/Qwen2.5-7B-Instruct \
 bash memory_directions/scripts/start_qwen_vllm.sh

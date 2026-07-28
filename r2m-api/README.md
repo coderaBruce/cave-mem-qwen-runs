@@ -102,6 +102,17 @@ Note `scripts/download_data.sh` upstream is broken: it calls a
 `download_data/download_narrativeqa.py` that does not exist, and fetches
 HotpotQA `eval_6400` although every eval script iterates `eval_400/1600/3200`.
 
+On an H100 server with an NVIDIA driver reporting CUDA 12.8, the Qwen remote
+setup script installs PyTorch from the cu128 wheel index before installing
+vLLM:
+
+```bash
+RECREATE_VENV=1 bash memory_directions/scripts/prepare_qwen_remote.sh
+```
+
+This avoids accidentally installing a newer CUDA build of PyTorch than the
+server driver can load.
+
 ## Running
 
 ```bash
