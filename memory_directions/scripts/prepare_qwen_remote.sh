@@ -11,6 +11,7 @@ set -euo pipefail
 #   INSTALL_VLLM=0           skip vLLM/PyTorch installation
 #   PYTORCH_CUDA=cu128       PyTorch CUDA wheel family, default cu128 for H100
 #   VLLM_VERSION=...         optional vLLM pin
+#   VLLM_CUDA=128            vLLM CUDA wheel suffix, default 128
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
@@ -19,6 +20,8 @@ INSTALL_VLLM="${INSTALL_VLLM:-1}"
 PYTHON_VERSION="${PYTHON_VERSION:-3.11}"
 PYTORCH_CUDA="${PYTORCH_CUDA:-cu128}"
 PYTORCH_INDEX_URL="${PYTORCH_INDEX_URL:-https://download.pytorch.org/whl/${PYTORCH_CUDA}}"
+VLLM_VERSION="${VLLM_VERSION:-0.26.0}"
+VLLM_CUDA="${VLLM_CUDA:-128}"
 
 if [[ "${RECREATE_VENV:-0}" == "1" && -e .venv ]]; then
   backup=".venv.bak.$(date +%Y%m%d-%H%M%S)"
@@ -63,16 +66,19 @@ echo "Using environment Python: $("$PY" --version 2>&1)"
 if [[ "$INSTALL_VLLM" == "1" ]]; then
   echo "Installing PyTorch from $PYTORCH_INDEX_URL"
   "$PY" -m pip uninstall -y torch torchvision torchaudio vllm || true
-  "$PY" -m pip install --index-url "$PYTORCH_INDEX_URL" torch torchvision torchaudio
-  if [[ -n "${VLLM_VERSION:-}" ]]; then
-    "$PY" -m pip install "vllm==${VLLM_VERSION}" --extra-index-url "$PYTORCH_INDEX_URL"
-  else
-    "$PY" -m pip install vllm --extra-index-url "$PYTORCH_INDEX_URL"
-  fi
+  "$PY" -m pip install --no-cache-dir --index-url "$PYTORCH_INDEX_URL" \
+    torch torchvision torchaudio
+  cpu_arch="$(uname -m)"
+  vllm_wheel="https://github.com/vllm-project/vllm/releases/download/v${VLLM_VERSION}/vllm-${VLLM_VERSION}+cu${VLLM_CUDA}-cp38-abi3-manylinux_2_35_${cpu_arch}.whl"
+  echo "Installing vLLM wheel: $vllm_wheel"
+  "$PY" -m pip install --no-cache-dir "$vllm_wheel" \
+    --extra-index-url "https://download.pytorch.org/whl/cu${VLLM_CUDA}"
   "$PY" - <<'PY'
 import torch
+import vllm
 print("torch", torch.__version__)
 print("torch cuda", torch.version.cuda)
+print("vllm", vllm.__version__)
 print("cuda available", torch.cuda.is_available())
 print("device", torch.cuda.get_device_name(0) if torch.cuda.is_available() else None)
 PY
