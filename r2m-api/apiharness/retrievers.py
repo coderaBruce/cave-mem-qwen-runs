@@ -28,6 +28,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import re
 import threading
 from collections import Counter
@@ -52,10 +53,16 @@ def _tokenize(text: str) -> List[str]:
 # Embeddings
 # --------------------------------------------------------------------------
 class EmbeddingClient:
-    """OpenAI embeddings with a content-addressed disk cache.
+    """Embeddings with a content-addressed disk cache.
 
     Pages are re-embedded on every run otherwise, which dominates cost on the
     long-context benchmarks (a 448K-token HotpotQA sample is ~220 pages).
+
+    Defaults to the OpenAI embedding API for the GPT-4o-mini experiments. For
+    fully local Qwen server runs, set either ``EMBED_BACKEND=local`` or use an
+    embed model name prefixed with ``local:``, for example
+    ``local:BAAI/bge-m3``. The local backend loads a SentenceTransformer model
+    lazily and does not require any API key.
     """
 
     def __init__(
@@ -64,18 +71,36 @@ class EmbeddingClient:
         cache_dir: Optional[str] = None,
         batch_size: int = 128,
     ):
+        backend = os.environ.get("EMBED_BACKEND", "").strip().lower()
+        if model.startswith("local:"):
+            backend = "local"
+            model = model[len("local:") :]
+        if not backend:
+            backend = "openai"
+        if backend not in {"openai", "local"}:
+            raise ValueError(f"unsupported EMBED_BACKEND={backend!r}")
+
+        self.backend = backend
         self.model = model
-        self.batch_size = batch_size
+        self.batch_size = int(os.environ.get("EMBED_BATCH_SIZE", batch_size))
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self._client = OpenAI(api_key=openai_embed_key(), base_url=openai_embed_base_url())
+        self._client = (
+            OpenAI(api_key=openai_embed_key(), base_url=openai_embed_base_url())
+            if self.backend == "openai"
+            else None
+        )
+        self._local_model = None
+        self._local_lock = threading.Lock()
         self._mem: Dict[str, np.ndarray] = {}
         self._lock = threading.Lock()
         self.n_embedded = 0  # texts actually sent to the API
 
     def _key(self, text: str) -> str:
-        return hashlib.sha256(f"{self.model}\x00{text}".encode("utf-8")).hexdigest()
+        return hashlib.sha256(
+            f"{self.backend}\x00{self.model}\x00{text}".encode("utf-8")
+        ).hexdigest()
 
     def _disk_path(self, key: str) -> Optional[Path]:
         if not self.cache_dir:
@@ -112,12 +137,10 @@ class EmbeddingClient:
 
         for start in range(0, len(missing), self.batch_size):
             chunk = missing[start : start + self.batch_size]
-            # The API rejects empty strings; substitute a single space.
             payload = [texts[i] if texts[i].strip() else " " for i in chunk]
-            resp = self._client.embeddings.create(model=self.model, input=payload)
+            vectors = self._embed_uncached(payload)
             self.n_embedded += len(chunk)
-            for idx, item in zip(chunk, resp.data):
-                vec = np.asarray(item.embedding, dtype="float32")
+            for idx, vec in zip(chunk, vectors):
                 norm = float(np.linalg.norm(vec))
                 if norm > 0:
                     vec = vec / norm
@@ -133,6 +156,33 @@ class EmbeddingClient:
                         pass
 
         return np.vstack([v for v in out if v is not None])
+
+    def _embed_uncached(self, payload: List[str]) -> np.ndarray:
+        if self.backend == "openai":
+            if self._client is None:
+                raise RuntimeError("OpenAI embedding client was not initialized")
+            resp = self._client.embeddings.create(model=self.model, input=payload)
+            return np.asarray([item.embedding for item in resp.data], dtype="float32")
+
+        with self._local_lock:
+            if self._local_model is None:
+                try:
+                    from sentence_transformers import SentenceTransformer
+                except ImportError as exc:
+                    raise RuntimeError(
+                        "Local embeddings require sentence-transformers. Install it "
+                        "or use the remote setup script."
+                    ) from exc
+                device = os.environ.get("LOCAL_EMBED_DEVICE", "cuda")
+                self._local_model = SentenceTransformer(self.model, device=device)
+            vectors = self._local_model.encode(
+                payload,
+                batch_size=self.batch_size,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+                show_progress_bar=False,
+            )
+        return np.asarray(vectors, dtype="float32")
 
 
 # --------------------------------------------------------------------------

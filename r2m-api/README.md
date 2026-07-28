@@ -70,6 +70,19 @@ export OPENAI_EMBED_API_KEY=$OPENAI_API_KEY
 export OPENAI_EMBED_BASE_URL=https://api.openai.com/v1
 ```
 
+For fully local Qwen runs with no OpenAI API usage, use the local embedding
+backend instead:
+
+```bash
+export OPENAI_LLM_BASE_URL=http://127.0.0.1:8001/v1
+export OPENAI_LLM_API_KEY=EMPTY
+export EMBED_BACKEND=local
+export EMBED_MODEL=local:BAAI/bge-m3
+```
+
+The convenience wrapper `memory_directions/scripts/run_qwen_local_full_eval.sh`
+sets these defaults automatically.
+
 If the split variables are unset, the harness falls back to the original
 `OPENAI_API_KEY` and optional `OPENAI_BASE_URL` behavior.
 

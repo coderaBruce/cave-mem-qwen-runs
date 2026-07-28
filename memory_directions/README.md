@@ -220,21 +220,28 @@ Results are written to `memory_directions/results/<tag>/summary.json`.
 
 ## Qwen Server Runs
 
-Qwen 3B/7B/14B runs are scripted but not executed locally. The script assumes
-an OpenAI-compatible chat endpoint, such as vLLM, and keeps embeddings on the
-normal OpenAI endpoint unless `OPENAI_EMBED_BASE_URL` is explicitly set.
+Qwen 3B/7B/14B runs are scripted but not executed locally. The remote scripts
+assume an OpenAI-compatible chat endpoint, such as vLLM. For server-only runs,
+use the local wrapper below: it routes chat to vLLM and embeddings to a local
+SentenceTransformer model (`BAAI/bge-m3` by default), so no `.env` or OpenAI API
+key is required.
 
 ```bash
-OPENAI_API_KEY=sk-... \
-OPENAI_LLM_BASE_URL=http://127.0.0.1:8001/v1 \
-OPENAI_LLM_API_KEY=EMPTY \
+# one-time remote setup: Python deps + HotpotQA/NarrativeQA eval data
+bash memory_directions/scripts/prepare_qwen_remote.sh
+
+# terminal/tmux pane 1: start local Qwen server
+MODEL_NAME=Qwen/Qwen2.5-7B-Instruct \
+bash memory_directions/scripts/start_qwen_vllm.sh
+
+# terminal/tmux pane 2: run GAM/R2Mem/CAVE-Mem with local LLM + local embeddings
 MODEL_NAME=Qwen/Qwen2.5-7B-Instruct \
 RUN_PREFIX=qwen25-7b \
-WORKERS=5 \
-bash memory_directions/scripts/run_qwen_full_eval.sh
+bash memory_directions/scripts/run_qwen_local_full_eval.sh
 ```
 
 Repeat with a different `MODEL_NAME`, endpoint port, and `RUN_PREFIX` for 3B,
-7B, and 14B. The helper
+7B, and 14B. The lower-level `run_qwen_full_eval.sh` still supports split
+remote endpoints if you explicitly want API embeddings. The helper
 `memory_directions/scripts/summarize_full_eval.py --prefix <RUN_PREFIX>` prints
 the matched GAM/R2Mem/ours table after a run finishes.
