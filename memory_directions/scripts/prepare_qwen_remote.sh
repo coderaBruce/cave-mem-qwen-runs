@@ -11,10 +11,22 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 
-PYTHON_BIN="${PYTHON_BIN:-python3.11}"
+if [[ -z "${PYTHON_BIN:-}" ]]; then
+  for candidate in python3.11 python3 python; do
+    if command -v "$candidate" >/dev/null 2>&1; then
+      PYTHON_BIN="$candidate"
+      break
+    fi
+  done
+fi
+if [[ -z "${PYTHON_BIN:-}" ]]; then
+  echo "No Python interpreter found. Set PYTHON_BIN=/path/to/python and rerun." >&2
+  exit 1
+fi
 INSTALL_VLLM="${INSTALL_VLLM:-1}"
 
 if [[ ! -d .venv ]]; then
+  echo "Using Python: $PYTHON_BIN ($("$PYTHON_BIN" --version 2>&1))"
   "$PYTHON_BIN" -m venv .venv
 fi
 
