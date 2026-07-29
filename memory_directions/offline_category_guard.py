@@ -115,8 +115,7 @@ def main() -> int:
         for source_name in category_source.values():
             if source_name not in source_rows:
                 raise SystemExit(f"unknown category source: {source_name}")
-        id_sets = [set(rows) for rows in source_rows.values()]
-        ids = sorted(set.intersection(*id_sets))
+        ids = sorted(source_rows[default_source])
         primary_categories = set(category_source)
     else:
         if not args.primary_run or not args.fallback_run:
@@ -139,6 +138,7 @@ def main() -> int:
 
     rows: List[Dict[str, Any]] = []
     changes = {name: 0 for name in source_rows}
+    missing = {name: 0 for name in source_rows}
     for qid in ids:
         ref = source_rows[default_source][qid]
         category = ref.get("category")
@@ -147,6 +147,9 @@ def main() -> int:
         except Exception:
             category_int = -1
         selected_source = category_source.get(category_int, default_source)
+        if qid not in source_rows[selected_source]:
+            missing[selected_source] += 1
+            selected_source = default_source
         selected = source_rows[selected_source][qid]
         row = dict(selected)
         row["summary_answer"] = _answer(selected)
@@ -155,7 +158,11 @@ def main() -> int:
             "qid": qid,
             "category": category,
             "selected": selected_source,
-            "answers": {name: _answer(source_rows[name][qid]) for name in source_rows},
+            "answers": {
+                name: _answer(rows_by_id[qid])
+                for name, rows_by_id in source_rows.items()
+                if qid in rows_by_id
+            },
         }
         changes[selected_source] += 1
         rows.append(row)
@@ -173,6 +180,7 @@ def main() -> int:
         "default_source": default_source,
         "n_questions": len(rows),
         "selection_counts": changes,
+        "missing_selected_source_counts": missing,
         "metrics": metrics,
     }
     (outdir / "all_qa_results.json").write_text(
