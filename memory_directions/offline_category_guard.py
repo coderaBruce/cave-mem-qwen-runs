@@ -24,7 +24,7 @@ for p in (str(R2M_API), str(UPSTREAM), str(ROOT)):
         sys.path.insert(0, p)
 
 from apiharness.scoring import score
-from memory_directions.offline_elaa import RESULTS, _answer, _load_rows, _resolve_path
+from memory_directions.offline_elaa import RESULTS, _answer, _resolve_path
 
 
 CATEGORY_ALIASES = {
@@ -77,6 +77,69 @@ def parse_source(values: List[str]) -> Dict[str, Path]:
     return out
 
 
+def _load_raw_rows(path: Path) -> List[Dict[str, Any]]:
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    return [r for r in rows if isinstance(r, dict) and "error" not in r]
+
+
+def _signature(row: Dict[str, Any]) -> tuple[str, str]:
+    question = str(row.get("question") or row.get("query") or "").strip().lower()
+    category = str(row.get("category") or "").strip()
+    return (category, " ".join(question.split()))
+
+
+def _signature_to_ids(rows_by_id: Dict[str, Dict[str, Any]]) -> Dict[tuple[str, str], List[str]]:
+    out: Dict[tuple[str, str], List[str]] = {}
+    for qid, row in rows_by_id.items():
+        out.setdefault(_signature(row), []).append(qid)
+    return out
+
+
+def _index_rows(
+    raw_rows: List[Dict[str, Any]],
+    *,
+    default_ids: List[str] | None = None,
+    signature_ids: Dict[tuple[str, str], List[str]] | None = None,
+) -> Dict[str, Dict[str, Any]]:
+    out: Dict[str, Dict[str, Any]] = {}
+    use_position = bool(default_ids) and len(default_ids or []) == len(raw_rows)
+    for idx, raw in enumerate(raw_rows):
+        qid = raw.get("_id")
+        if not qid and use_position and default_ids is not None:
+            qid = default_ids[idx]
+        if not qid and signature_ids is not None:
+            candidates = signature_ids.get(_signature(raw), [])
+            if len(candidates) == 1:
+                qid = candidates[0]
+        if not qid:
+            continue
+        row = dict(raw)
+        row.setdefault("_id", str(qid))
+        out[str(qid)] = row
+    return out
+
+
+def _load_aligned_sources(source_paths: Dict[str, Path], default_source: str) -> Dict[str, Dict[str, Any]]:
+    raw_sources = {
+        name: _load_raw_rows(path / "all_qa_results.json")
+        for name, path in source_paths.items()
+    }
+    default_rows = _index_rows(raw_sources[default_source])
+    default_ids = list(default_rows)
+    sig_ids = _signature_to_ids(default_rows)
+    out: Dict[str, Dict[str, Any]] = {}
+    for name, rows in raw_sources.items():
+        if name == default_source:
+            out[name] = default_rows
+        else:
+            out[name] = _index_rows(
+                rows,
+                default_ids=default_ids,
+                signature_ids=sig_ids,
+            )
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", default="locomo", choices=["locomo"])
@@ -102,19 +165,16 @@ def main() -> int:
 
     if args.source:
         source_paths = parse_source(args.source)
-        source_rows = {
-            name: _load_rows(path / "all_qa_results.json")
-            for name, path in source_paths.items()
-        }
         category_source = parse_category_source(args.category_source)
         default_source = args.default_source
         if not default_source:
             raise SystemExit("--default-source is required with --source")
-        if default_source not in source_rows:
+        if default_source not in source_paths:
             raise SystemExit(f"--default-source {default_source} is not a named source")
         for source_name in category_source.values():
-            if source_name not in source_rows:
+            if source_name not in source_paths:
                 raise SystemExit(f"unknown category source: {source_name}")
+        source_rows = _load_aligned_sources(source_paths, default_source)
         ids = sorted(source_rows[default_source])
         primary_categories = set(category_source)
     else:
@@ -124,10 +184,7 @@ def main() -> int:
             "primary": _resolve_path(args.primary_run),
             "fallback": _resolve_path(args.fallback_run),
         }
-        source_rows = {
-            "primary": _load_rows(source_paths["primary"] / "all_qa_results.json"),
-            "fallback": _load_rows(source_paths["fallback"] / "all_qa_results.json"),
-        }
+        source_rows = _load_aligned_sources(source_paths, "fallback")
         primary_categories = parse_categories(args.primary_categories)
         category_source = {cat: "primary" for cat in primary_categories}
         default_source = "fallback"
