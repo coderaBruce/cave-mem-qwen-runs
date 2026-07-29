@@ -52,6 +52,8 @@ def load_json(path: Path) -> Optional[Dict[str, Any]]:
 
 def metric(summary: Dict[str, Any], key: str) -> Any:
     overall = summary.get("metrics", {}).get("overall", {})
+    if key == "bleu":
+        return overall.get("bleu") if "bleu" in overall else overall.get("bleu1")
     return overall.get(key)
 
 
@@ -63,7 +65,7 @@ def mirror_dir(src: Path, dst: Path) -> None:
 
 def write_index(rows: Iterable[Dict[str, Any]], outdir: Path) -> None:
     rows = list(rows)
-    columns = ["dataset", "method", "status", "n", "f1", "bleu", "source", "artifact"]
+    columns = ["dataset", "method", "status", "n", "f1", "bleu1", "source", "artifact"]
     lines = ["\t".join(columns)]
     for row in rows:
         lines.append("\t".join(str(row.get(col, "")) for col in columns))
@@ -72,14 +74,14 @@ def write_index(rows: Iterable[Dict[str, Any]], outdir: Path) -> None:
     md = ["| dataset | method | n | F1 | BLEU | status |", "|---|---:|---:|---:|---:|---|"]
     for row in rows:
         f1 = row.get("f1")
-        bleu = row.get("bleu")
+        bleu1 = row.get("bleu1")
         md.append(
-            "| {dataset} | {method} | {n} | {f1} | {bleu} | {status} |".format(
+            "| {dataset} | {method} | {n} | {f1} | {bleu1} | {status} |".format(
                 dataset=row.get("dataset", ""),
                 method=row.get("method", ""),
                 n=row.get("n", ""),
                 f1="" if f1 in (None, "") else f"{float(f1):.4f}",
-                bleu="" if bleu in (None, "") else f"{float(bleu):.4f}",
+                bleu1="" if bleu1 in (None, "") else f"{float(bleu1):.4f}",
                 status=row.get("status", ""),
             )
         )
@@ -112,7 +114,7 @@ def main() -> int:
             "artifact": f"artifacts/{artifact_name}" if args.copy_artifacts else "",
         }
         if summary is None:
-            row.update({"status": "missing", "n": "", "f1": "", "bleu": ""})
+            row.update({"status": "missing", "n": "", "f1": "", "bleu1": ""})
             rows.append(row)
             continue
 
@@ -127,7 +129,7 @@ def main() -> int:
                 "status": "done",
                 "n": metric(summary, "n") or summary.get("n_questions", ""),
                 "f1": metric(summary, "f1"),
-                "bleu": metric(summary, "bleu"),
+                "bleu1": metric(summary, "bleu"),
             }
         )
         rows.append(row)
