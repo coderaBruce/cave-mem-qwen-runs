@@ -233,18 +233,36 @@ bash memory_directions/scripts/prepare_qwen_remote.sh
 # if a previous setup used an incompatible Python/Torch stack, rebuild it
 RECREATE_VENV=1 bash memory_directions/scripts/prepare_qwen_remote.sh
 
-# terminal/tmux/screen pane 1: start Qwen2.5-7B by default
-bash memory_directions/scripts/start_qwen_vllm.sh
+# terminal/tmux/screen pane 1: start Qwen2.5-7B
+bash memory_directions/scripts/start_qwen7b_vllm.sh
 
-# terminal/tmux/screen pane 2: run GAM/R2Mem/CAVE-Mem as qwen25-7b by default
-bash memory_directions/scripts/run_qwen_local_full_eval.sh
+# terminal/tmux/screen pane 2: run one 12-hour-sized block
+bash memory_directions/scripts/run_qwen7b_locomo.sh
+bash memory_directions/scripts/run_qwen7b_hotpot.sh
+bash memory_directions/scripts/run_qwen7b_nqa.sh
 ```
 
-Repeat with a different `MODEL_NAME` and endpoint port for 3B and 14B. The
-local wrapper maps the standard Qwen2.5 names to `qwen25-3b`, `qwen25-7b`, and
-`qwen25-14b`. The vLLM wrapper defaults to a 16K context window, and the local
-eval wrapper defaults to a 1024-token research output cap to avoid 8K context
-boundary failures in long GAM prompts. The lower-level `run_qwen_full_eval.sh` still supports split
-remote endpoints if you explicitly want API embeddings. The helper
-`memory_directions/scripts/summarize_full_eval.py --prefix <RUN_PREFIX>` prints
-the matched GAM/R2Mem/ours table after a run finishes.
+For 3B, restart vLLM with `bash memory_directions/scripts/start_qwen3b_vllm.sh`
+and run:
+
+```bash
+bash memory_directions/scripts/run_qwen3b_locomo.sh
+bash memory_directions/scripts/run_qwen3b_hotpot.sh
+bash memory_directions/scripts/run_qwen3b_nqa.sh
+```
+
+The core blocks evaluate Static RAG, GAM, R2Mem, and CAVE-Mem on the matched
+dataset split. Optional LoCoMo-only reproduced memory baselines are separate:
+
+```bash
+bash memory_directions/scripts/run_qwen7b_locomo_extra.sh
+bash memory_directions/scripts/run_qwen3b_locomo_extra.sh
+```
+
+Each block mirrors completed summaries and artifacts into
+`qwen_runs/<RUN_PREFIX>/`, with `summary_index.tsv`, `leaderboard.md`, and
+`manifest.json` at the top level. The vLLM wrapper defaults to a 16K context
+window, and the local eval wrappers default to a 1024-token research output cap
+to avoid 8K context boundary failures in long GAM prompts. The lower-level
+`run_qwen_full_eval.sh` still supports split remote endpoints if you explicitly
+want API embeddings.

@@ -14,6 +14,7 @@ r2m-api/.cache/
 memory_directions/results/
 memory_directions/.cache/
 memory_directions/checkpoints/
+qwen_runs/
 
 # Local external clones; not required for the Qwen remote-run pipeline
 external_baselines/
