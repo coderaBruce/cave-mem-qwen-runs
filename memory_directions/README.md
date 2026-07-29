@@ -233,18 +233,16 @@ bash memory_directions/scripts/prepare_qwen_remote.sh
 # if a previous setup used an incompatible Python/Torch stack, rebuild it
 RECREATE_VENV=1 bash memory_directions/scripts/prepare_qwen_remote.sh
 
-# terminal/tmux pane 1: start local Qwen server
-MODEL_NAME=Qwen/Qwen2.5-7B-Instruct \
+# terminal/tmux/screen pane 1: start Qwen2.5-7B by default
 bash memory_directions/scripts/start_qwen_vllm.sh
 
-# terminal/tmux pane 2: run GAM/R2Mem/CAVE-Mem with local LLM + local embeddings
-MODEL_NAME=Qwen/Qwen2.5-7B-Instruct \
-RUN_PREFIX=qwen25-7b \
+# terminal/tmux/screen pane 2: run GAM/R2Mem/CAVE-Mem as qwen25-7b by default
 bash memory_directions/scripts/run_qwen_local_full_eval.sh
 ```
 
-Repeat with a different `MODEL_NAME`, endpoint port, and `RUN_PREFIX` for 3B,
-7B, and 14B. The lower-level `run_qwen_full_eval.sh` still supports split
+Repeat with a different `MODEL_NAME` and endpoint port for 3B and 14B. The
+local wrapper maps the standard Qwen2.5 names to `qwen25-3b`, `qwen25-7b`, and
+`qwen25-14b`. The lower-level `run_qwen_full_eval.sh` still supports split
 remote endpoints if you explicitly want API embeddings. The helper
 `memory_directions/scripts/summarize_full_eval.py --prefix <RUN_PREFIX>` prints
 the matched GAM/R2Mem/ours table after a run finishes.
