@@ -16,6 +16,23 @@ from typing import Any, Dict, Iterable, List, Optional
 
 
 ROOT = Path(__file__).resolve().parents[2]
+LOCOMO_CATEGORIES = [
+    ("multi_hop", "Multi-hop"),
+    ("temporal", "Temporal"),
+    ("open_domain", "Open"),
+    ("single_hop", "Single-hop"),
+]
+LOCOMO_METHOD_ORDER = [
+    ("static_rag", "Static RAG"),
+    ("mem0", "Mem0$^\\dagger$"),
+    ("amem", "A-Mem$^\\dagger$"),
+    ("memoryos", "MemoryOS$^\\dagger$"),
+    ("lightmem", "LightMem$^\\dagger$"),
+    ("memoryr1", "Memory-R1$^\\dagger$"),
+    ("gam", "GAM"),
+    ("r2mem", "R2Mem"),
+    ("cave_mem", "\\method{}"),
+]
 
 
 def result_defs(prefix: str) -> List[Dict[str, str]]:
@@ -88,6 +105,56 @@ def write_index(rows: Iterable[Dict[str, Any]], outdir: Path) -> None:
     (outdir / "leaderboard.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
 
+def _fmt(value: Any) -> str:
+    return "--" if value in (None, "") else f"{float(value):.2f}"
+
+
+def _metric_pair(bucket: Dict[str, Any]) -> tuple[Any, Any]:
+    if not bucket:
+        return None, None
+    bleu = bucket.get("bleu") if "bleu" in bucket else bucket.get("bleu1")
+    return bucket.get("f1"), bleu
+
+
+def write_locomo_category_tables(rows: Iterable[Dict[str, Any]], outdir: Path) -> None:
+    by_method = {
+        row["method"]: row
+        for row in rows
+        if row.get("dataset") == "locomo" and row.get("status") == "done"
+    }
+    if not by_method:
+        return
+
+    md = [
+        "| method | Overall F1 | Overall BLEU | Multi-hop F1 | Multi-hop BLEU | Temporal F1 | Temporal BLEU | Open F1 | Open BLEU | Single-hop F1 | Single-hop BLEU |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    tex_rows: List[str] = []
+    for method, label in LOCOMO_METHOD_ORDER:
+        row = by_method.get(method)
+        if row is None:
+            continue
+        summary = load_json(ROOT / row["source"] / "summary.json") or {}
+        metrics = summary.get("metrics", {})
+        values: List[str] = []
+        overall_f1, overall_bleu = _metric_pair(metrics.get("overall", {}))
+        values.extend([_fmt(overall_f1), _fmt(overall_bleu)])
+        for key, _title in LOCOMO_CATEGORIES:
+            f1, bleu = _metric_pair(metrics.get("by_category", {}).get(key, {}))
+            values.extend([_fmt(f1), _fmt(bleu)])
+
+        md_label = label.replace("$^\\dagger$", "")
+        md.append(f"| {md_label} | " + " | ".join(values) + " |")
+        tex_rows.append(f"& {label} & " + " & ".join(values) + r" \\")
+
+    (outdir / "locomo_category_leaderboard.md").write_text(
+        "\n".join(md) + "\n", encoding="utf-8"
+    )
+    (outdir / "locomo_category_rows.tex").write_text(
+        "\n".join(tex_rows) + "\n", encoding="utf-8"
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefix", required=True, help="Run prefix, e.g. qwen25-7b")
@@ -144,9 +211,11 @@ def main() -> int:
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     write_index(rows, outdir)
+    write_locomo_category_tables(rows, outdir)
     done = sum(1 for row in rows if row["status"] == "done")
     print(f"collected {done}/{len(rows)} result groups -> {outdir}")
     print(f"index -> {outdir / 'summary_index.tsv'}")
+    print(f"locomo categories -> {outdir / 'locomo_category_leaderboard.md'}")
     return 0
 
 
