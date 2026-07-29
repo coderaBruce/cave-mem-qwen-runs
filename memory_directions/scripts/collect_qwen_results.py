@@ -32,6 +32,8 @@ LOCOMO_METHOD_ORDER = [
     ("gam", "GAM"),
     ("r2mem", "R2Mem"),
     ("cave_mem", "\\method{}"),
+    ("cave_mem_guarded", "\\method{}-Guard"),
+    ("category_oracle", "Category Oracle"),
 ]
 
 
@@ -54,6 +56,22 @@ def result_defs(prefix: str) -> List[Dict[str, str]]:
         ("locomo", method, f"r2m-api/results/{method}-locomo-{prefix}-full-no26")
         for method in ("mem0", "amem", "memoryos", "lightmem", "memoryr1")
     )
+    return [{"dataset": d, "method": m, "source": s} for d, m, s in rows]
+
+
+def optional_result_defs(prefix: str) -> List[Dict[str, str]]:
+    rows = [
+        (
+            "locomo",
+            "cave_mem_guarded",
+            f"memory_directions/results/locomo-v11-category-guard-{prefix}",
+        ),
+        (
+            "locomo",
+            "category_oracle",
+            f"memory_directions/results/locomo-category-oracle-{prefix}",
+        )
+    ]
     return [{"dataset": d, "method": m, "source": s} for d, m, s in rows]
 
 
@@ -170,7 +188,13 @@ def main() -> int:
         artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     rows: List[Dict[str, Any]] = []
-    for item in result_defs(args.prefix):
+    required = result_defs(args.prefix)
+    optional = [
+        item
+        for item in optional_result_defs(args.prefix)
+        if (ROOT / item["source"] / "summary.json").exists()
+    ]
+    for item in required + optional:
         src = ROOT / item["source"]
         summary = load_json(src / "summary.json")
         artifact_name = safe_name(item["source"])
