@@ -33,14 +33,10 @@ def result_defs(prefix: str) -> List[Dict[str, str]]:
         ("narrativeqa", "r2mem", f"r2m-api/results/r2mem-nqa300-{prefix}-full"),
         ("narrativeqa", "cave_mem", f"memory_directions/results/narrativeqa300-v11-{prefix}"),
     ]
-    for method in ("mem0", "amem", "memoryos", "lightmem", "memoryr1"):
-        rows.extend(
-            [
-                ("locomo", method, f"r2m-api/results/{method}-locomo-{prefix}-full-no26"),
-                ("hotpotqa", method, f"r2m-api/results/{method}-hotpot400-{prefix}"),
-                ("narrativeqa", method, f"r2m-api/results/{method}-nqa300-{prefix}"),
-            ]
-        )
+    rows.extend(
+        ("locomo", method, f"r2m-api/results/{method}-locomo-{prefix}-full-no26")
+        for method in ("mem0", "amem", "memoryos", "lightmem", "memoryr1")
+    )
     return [{"dataset": d, "method": m, "source": s} for d, m, s in rows]
 
 
