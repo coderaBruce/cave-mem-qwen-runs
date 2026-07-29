@@ -242,6 +242,12 @@ bash memory_directions/scripts/run_qwen7b_hotpot.sh
 bash memory_directions/scripts/run_qwen7b_nqa.sh
 ```
 
+For unattended 7B runs, start vLLM first and then run all planned 7B blocks:
+
+```bash
+bash memory_directions/scripts/run_qwen7b_overnight.sh
+```
+
 For 3B, restart vLLM with `bash memory_directions/scripts/start_qwen3b_vllm.sh`
 and run:
 
