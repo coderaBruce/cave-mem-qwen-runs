@@ -262,7 +262,7 @@ bash memory_directions/scripts/run_qwen3b_locomo_extra.sh
 Each block mirrors completed summaries and artifacts into
 `qwen_runs/<RUN_PREFIX>/`, with `summary_index.tsv`, `leaderboard.md`, and
 `manifest.json` at the top level. The vLLM wrapper defaults to a 16K context
-window, and the local eval wrappers default to a 1024-token research output cap
-to avoid 8K context boundary failures in long GAM prompts. The lower-level
+window, and the local eval wrappers default to a 768-token research output cap
+to avoid 16K context boundary failures in long GAM prompts. The lower-level
 `run_qwen_full_eval.sh` still supports split remote endpoints if you explicitly
 want API embeddings.
