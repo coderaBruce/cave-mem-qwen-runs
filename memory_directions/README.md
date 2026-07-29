@@ -242,7 +242,9 @@ bash memory_directions/scripts/run_qwen_local_full_eval.sh
 
 Repeat with a different `MODEL_NAME` and endpoint port for 3B and 14B. The
 local wrapper maps the standard Qwen2.5 names to `qwen25-3b`, `qwen25-7b`, and
-`qwen25-14b`. The lower-level `run_qwen_full_eval.sh` still supports split
+`qwen25-14b`. The vLLM wrapper defaults to a 16K context window, and the local
+eval wrapper defaults to a 1024-token research output cap to avoid 8K context
+boundary failures in long GAM prompts. The lower-level `run_qwen_full_eval.sh` still supports split
 remote endpoints if you explicitly want API embeddings. The helper
 `memory_directions/scripts/summarize_full_eval.py --prefix <RUN_PREFIX>` prints
 the matched GAM/R2Mem/ours table after a run finishes.

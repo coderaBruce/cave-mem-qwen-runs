@@ -50,13 +50,18 @@ def make_generators(
     `temperature=0.3` and these `max_tokens` mirror `eval/locomo_test.py`.
     """
     common = dict(model_name=model, cache_dir=str(cache_dir), temperature=temperature)
+    memory_max_tokens = int(os.environ.get("MEMORY_MAX_TOKENS", "256"))
+    research_max_tokens = int(os.environ.get("RESEARCH_MAX_TOKENS", "2048"))
+    working_max_tokens = int(os.environ.get("WORKING_MAX_TOKENS", "256"))
     return {
-        "memory": CachedOpenAIGenerator({**common, "max_tokens": 256, "role": "memory"}),
+        "memory": CachedOpenAIGenerator(
+            {**common, "max_tokens": memory_max_tokens, "role": "memory"}
+        ),
         "research": CachedOpenAIGenerator(
-            {**common, "max_tokens": 2048, "role": "research"}
+            {**common, "max_tokens": research_max_tokens, "role": "research"}
         ),
         "working": CachedOpenAIGenerator(
-            {**common, "max_tokens": 256, "role": "working"}
+            {**common, "max_tokens": working_max_tokens, "role": "working"}
         ),
     }
 
