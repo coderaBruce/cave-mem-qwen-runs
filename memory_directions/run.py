@@ -125,6 +125,8 @@ def main() -> int:
     parser.add_argument("--evidence-chars", type=int, default=1200)
     parser.add_argument("--evidence-header", action="store_true")
     parser.add_argument("--rebuild", action="store_true")
+    parser.add_argument("--resume-samples", action="store_true")
+    parser.add_argument("--memory-source-run", default=None)
     parser.add_argument("--no-cache", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
@@ -226,6 +228,17 @@ def main() -> int:
     tag = args.tag or f"{args.dataset}-{args.method}-{args.model}"
     outdir = RESULTS / tag
     outdir.mkdir(parents=True, exist_ok=True)
+    memory_source_root = None
+    if args.memory_source_run:
+        candidates = [
+            Path(args.memory_source_run),
+            RESULTS / args.memory_source_run,
+            R2M_API / "results" / args.memory_source_run,
+        ]
+        memory_source_root = next((p for p in candidates if p.exists()), None)
+        if memory_source_root is None:
+            print(f"--memory-source-run not found: {args.memory_source_run}")
+            return 2
 
     n_questions = sum(len(s.qas) for s in samples)
     print(
@@ -256,9 +269,27 @@ def main() -> int:
     def do_sample(indexed_sample):
         idx, sample = indexed_sample
         try:
+            if args.resume_samples and not args.rebuild:
+                sample_dir = outdir / sample.sample_id
+                qa_file = sample_dir / "qa_results.json"
+                stats_file = sample_dir / "run_stats.json"
+                if qa_file.exists():
+                    try:
+                        qa_results = json.loads(qa_file.read_text(encoding="utf-8"))
+                        stats = (
+                            json.loads(stats_file.read_text(encoding="utf-8"))
+                            if stats_file.exists()
+                            else {"sample_id": sample.sample_id,
+                                  "n_questions": len(sample.qas), "resumed": True}
+                        )
+                        return idx, sample, {"qa_results": qa_results, "stats": stats}, None
+                    except (OSError, json.JSONDecodeError):
+                        pass
             kwargs = {}
             if researcher_factory is not None:
                 kwargs["researcher_factory"] = researcher_factory
+            if memory_source_root is not None:
+                kwargs["memory_source_dir"] = memory_source_root / sample.sample_id
             result = run_sample(
                 sample,
                 spec,
@@ -324,6 +355,8 @@ def main() -> int:
         "evidence_pages": args.evidence_pages,
         "evidence_chars": args.evidence_chars,
         "evidence_header": args.evidence_header,
+        "resume_samples": args.resume_samples,
+        "memory_source_run": args.memory_source_run,
         "n_samples": len(samples),
         "n_questions": len(all_qa),
         "n_errors": sum(1 for r in all_qa if "error" in r),

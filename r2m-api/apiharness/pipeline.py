@@ -32,7 +32,7 @@ from typing import Any, Callable, Dict, List, Optional
 from gam.agents.memory_agent import MemoryAgent
 from gam.agents.research_agent import ResearchAgent
 from gam.retriever.index_retriever import IndexRetriever
-from gam.schemas import InMemoryMemoryStore, InMemoryPageStore
+from gam.schemas import InMemoryMemoryStore, InMemoryPageStore, MemoryState
 
 from .cached_generator import CachedOpenAIGenerator
 from .datasets import DatasetSpec, QAItem, Sample, materialise_chunks
@@ -73,14 +73,28 @@ def build_memory_and_retrievers(
     embedder: EmbeddingClient,
     rebuild: bool = False,
     index_header: str = "none",
+    memory_source_dir: Optional[Path] = None,
 ):
     """Run the Memorizer over `chunks`, then build the three retrievers."""
     workdir.mkdir(parents=True, exist_ok=True)
-    memory_store = InMemoryMemoryStore(dir_path=str(workdir))
-    page_store = InMemoryPageStore(dir_path=str(workdir))
+    source_dir = Path(memory_source_dir) if memory_source_dir else workdir
+    memory_store = InMemoryMemoryStore(dir_path=str(source_dir))
+    page_store = InMemoryPageStore(dir_path=str(source_dir))
 
-    state_file = workdir / "memory_state.json"
-    if rebuild or not state_file.exists():
+    state_file = source_dir / "memory_state.json"
+    pages = page_store.load()
+    state = memory_store.load()
+    cache_complete = (
+        not rebuild
+        and
+        state_file.exists()
+        and len(pages) >= len(chunks)
+    )
+    if rebuild or not cache_complete:
+        memory_store = InMemoryMemoryStore(dir_path=str(workdir))
+        page_store = InMemoryPageStore(dir_path=str(workdir))
+        memory_store.save(MemoryState())
+        page_store.save([])
         agent = MemoryAgent(
             memory_store=memory_store, page_store=page_store, generator=memory_generator
         )
@@ -138,6 +152,7 @@ def run_sample(
     evidence_chars: int = 0,
     include_header: bool = False,
     index_header: str = "none",   # none | dense | bm25 | both
+    memory_source_dir: Optional[Path] = None,
 ) -> Dict[str, Any]:
     """Build memory for one sample, then answer each of its questions."""
     sample_dir = outdir / sample.sample_id
@@ -148,7 +163,7 @@ def run_sample(
     t0 = time.time()
     memory_store, page_store, retrievers = build_memory_and_retrievers(
         chunks, sample_dir, generators["memory"], embedder, rebuild=rebuild,
-        index_header=index_header,
+        index_header=index_header, memory_source_dir=memory_source_dir,
     )
     build_secs = time.time() - t0
 
