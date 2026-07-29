@@ -15,6 +15,10 @@ WORKERS="${WORKERS:-5}"
 SOURCE_RUN="memory_directions/results/locomo-current-${PREFIX}"
 SHOTS_RUN="${SHOTS_RUN:-}"
 
+export OPENAI_LLM_BASE_URL="${OPENAI_LLM_BASE_URL:-http://127.0.0.1:8001/v1}"
+export OPENAI_LLM_API_KEY="${OPENAI_LLM_API_KEY:-EMPTY}"
+export WORKING_MAX_TOKENS="${WORKING_MAX_TOKENS:-256}"
+
 if [[ ! -f "$SOURCE_RUN/all_qa_results.json" ]]; then
   echo "missing source run: $SOURCE_RUN/all_qa_results.json" >&2
   exit 2
@@ -39,6 +43,8 @@ echo "  SOURCE_RUN=$SOURCE_RUN"
 echo "  SHOTS_RUN=$SHOTS_RUN"
 echo "  MODEL_NAME=$MODEL_NAME"
 echo "  WORKERS=$WORKERS"
+echo "  OPENAI_LLM_BASE_URL=$OPENAI_LLM_BASE_URL"
+echo "  WORKING_MAX_TOKENS=$WORKING_MAX_TOKENS"
 
 run_reanswer() {
   local tag="$1"
