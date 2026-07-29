@@ -37,7 +37,7 @@ LOCOMO_METHOD_ORDER = [
 ]
 
 
-def result_defs(prefix: str) -> List[Dict[str, str]]:
+def result_defs(prefix: str, include_extra_baselines: bool = True) -> List[Dict[str, str]]:
     rows = [
         ("locomo", "static_rag", f"r2m-api/results/rag-locomo-{prefix}-full-no26"),
         ("locomo", "gam", f"r2m-api/results/gam-locomo-{prefix}-full-no26"),
@@ -52,10 +52,11 @@ def result_defs(prefix: str) -> List[Dict[str, str]]:
         ("narrativeqa", "r2mem", f"r2m-api/results/r2mem-nqa300-{prefix}-full"),
         ("narrativeqa", "cave_mem", f"memory_directions/results/narrativeqa300-v11-{prefix}"),
     ]
-    rows.extend(
-        ("locomo", method, f"r2m-api/results/{method}-locomo-{prefix}-full-no26")
-        for method in ("mem0", "amem", "memoryos", "lightmem", "memoryr1")
-    )
+    if include_extra_baselines:
+        rows.extend(
+            ("locomo", method, f"r2m-api/results/{method}-locomo-{prefix}-full-no26")
+            for method in ("mem0", "amem", "memoryos", "lightmem", "memoryr1")
+        )
     return [{"dataset": d, "method": m, "source": s} for d, m, s in rows]
 
 
@@ -178,6 +179,11 @@ def main() -> int:
     parser.add_argument("--prefix", required=True, help="Run prefix, e.g. qwen25-7b")
     parser.add_argument("--out-root", default="qwen_runs")
     parser.add_argument("--copy-artifacts", action="store_true")
+    parser.add_argument(
+        "--core-only",
+        action="store_true",
+        help="Collect only Static RAG/GAM/R2Mem/CAVE-Mem rows.",
+    )
     args = parser.parse_args()
 
     outdir = ROOT / args.out_root / args.prefix
@@ -188,7 +194,7 @@ def main() -> int:
         artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     rows: List[Dict[str, Any]] = []
-    required = result_defs(args.prefix)
+    required = result_defs(args.prefix, include_extra_baselines=not args.core_only)
     optional = [
         item
         for item in optional_result_defs(args.prefix)

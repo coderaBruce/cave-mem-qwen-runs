@@ -52,6 +52,7 @@ PY_ABS="$("$PY" -c 'import sys; print(sys.executable)')"
 PORT="${PORT:-8001}"
 WORKERS="${WORKERS:-5}"
 COPY_ARTIFACTS="${COPY_ARTIFACTS:-1}"
+COLLECT_CORE_ONLY="${COLLECT_CORE_ONLY:-0}"
 
 if [[ -z "${HF_HOME:-}" ]]; then
   if [[ -d "/data/${USER:-}" ]]; then
@@ -88,6 +89,9 @@ collect_results() {
   local args=(--prefix "$RUN_PREFIX")
   if [[ "$COPY_ARTIFACTS" == "1" ]]; then
     args+=(--copy-artifacts)
+  fi
+  if [[ "$COLLECT_CORE_ONLY" == "1" ]]; then
+    args+=(--core-only)
   fi
   "$PY_ABS" memory_directions/scripts/collect_qwen_results.py "${args[@]}" || true
 }
@@ -162,6 +166,7 @@ echo "  BLOCK=$BLOCK"
 echo "  OPENAI_LLM_BASE_URL=$OPENAI_LLM_BASE_URL"
 echo "  EMBED_MODEL=$EMBED_MODEL"
 echo "  WORKERS=$WORKERS"
+echo "  COLLECT_CORE_ONLY=$COLLECT_CORE_ONLY"
 echo "  RESULTS=qwen_runs/$RUN_PREFIX"
 
 check_endpoint

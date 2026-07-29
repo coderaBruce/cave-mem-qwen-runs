@@ -218,6 +218,50 @@ cd /Users/xinyu.li/Documents/research1
 
 Results are written to `memory_directions/results/<tag>/summary.json`.
 
+## Remote Qwen 3B Core Scaling
+
+These scripts are for the H100 remote workflow. They do not call OpenAI APIs
+and assume the remote environment has already been prepared with
+`memory_directions/scripts/prepare_qwen_remote.sh`.
+
+Start the Qwen2.5-3B OpenAI-compatible endpoint in one `screen`:
+
+```bash
+cd /data/xli74/cave-mem-qwen-runs
+bash memory_directions/scripts/start_qwen3b_vllm.sh
+```
+
+Then run the 3B core suite in another `screen`:
+
+```bash
+cd /data/xli74/cave-mem-qwen-runs
+bash memory_directions/scripts/run_qwen3b_core_suite.sh
+```
+
+The suite runs only the core methods, `Static RAG`, `GAM`, `R2Mem`, and
+`CAVE-Mem`, on:
+
+- LoCoMo common no26, including full and category metrics.
+- HotpotQA `eval_400`.
+- NarrativeQA seed-42 300-question subset.
+
+Collected results are written to `qwen_runs/qwen25-3b/`:
+
+- `leaderboard.md` for the core cross-dataset table.
+- `locomo_category_leaderboard.md` for LoCoMo full/category metrics.
+- `health_core.md` for run-health checks.
+- `artifacts/` if `COPY_ARTIFACTS=1` is left at the default.
+
+To re-check after reconnecting:
+
+```bash
+./.venv/bin/python memory_directions/scripts/collect_qwen_results.py \
+  --prefix qwen25-3b --core-only --copy-artifacts
+
+./.venv/bin/python memory_directions/scripts/check_qwen_result_health.py \
+  --prefix qwen25-3b --core-only
+```
+
 ## Qwen Server Runs
 
 Qwen 3B/7B/14B runs are scripted but not executed locally. The remote scripts

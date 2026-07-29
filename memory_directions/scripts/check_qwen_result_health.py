@@ -124,10 +124,18 @@ def main() -> int:
     parser.add_argument("--prefix", default="qwen25-7b")
     parser.add_argument("--dataset", choices=["locomo", "hotpotqa", "narrativeqa"])
     parser.add_argument("--method")
+    parser.add_argument(
+        "--core-only",
+        action="store_true",
+        help="Check only Static RAG/GAM/R2Mem/CAVE-Mem rows.",
+    )
     args = parser.parse_args()
 
+    core_methods = {"static_rag", "gam", "r2mem", "cave_mem"}
     groups = []
     for dataset, method, tmpl in RESULT_GROUPS:
+        if args.core_only and method not in core_methods:
+            continue
         if args.dataset and dataset != args.dataset:
             continue
         if args.method and method != args.method:
