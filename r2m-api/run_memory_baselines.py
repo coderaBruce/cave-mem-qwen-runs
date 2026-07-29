@@ -2,10 +2,10 @@
 """API-only structured-memory baselines on the shared GAM/R2Mem scorer.
 
 These are lightweight reproductions of the external baselines reported by
-R2Mem. They keep the evaluation protocol fixed: GPT-4o-mini, the same LoCoMo
-split, the same answer prompts, and the same token-F1/BLEU scorer. The goal is
-not to claim official reproduction of systems whose released code/training
-recipes are external; it is to provide matched-backbone baseline numbers.
+R2Mem. They keep the evaluation protocol fixed: same backbone, same benchmark
+split, same answer prompts, and same token-F1/BLEU scorer. The goal is not to
+claim official reproduction of systems whose released code/training recipes are
+external; it is to provide matched-backbone structured-memory baseline numbers.
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ import numpy as np
 
 import apiharness  # noqa: F401
 from apiharness.cached_generator import CachedOpenAIGenerator
-from apiharness.datasets import LOADERS, DatasetSpec, QAItem, Sample
+from apiharness.datasets import LOADERS, DatasetSpec, QAItem, Sample, materialise_chunks
 from apiharness.retrievers import EmbeddingClient, _tokenize
 from apiharness.scoring import score
 
@@ -61,17 +61,33 @@ def _clean_lines(text: str) -> List[str]:
     return out
 
 
-def _memory_prompt(method: str, session_header: str, session_text: str) -> str:
-    common = f"""You are constructing a long-term memory for LoCoMo dialogue QA.
-Keep facts that may help answer future questions. Preserve names, dates,
-places, counts, reasons, feelings, preferences, events, and relationships.
+def _memory_prompt(method: str, dataset: str, chunk_header: str, chunk_text: str) -> str:
+    if dataset == "locomo":
+        source_name = "LoCoMo dialogue QA"
+        source_label = "DIALOGUE"
+        guidance = "Preserve names, dates, places, counts, reasons, feelings, preferences, events, and relationships."
+    elif dataset.startswith("hotpotqa"):
+        source_name = "HotpotQA multi-hop QA"
+        source_label = "CONTEXT CHUNK"
+        guidance = "Preserve entities, aliases, dates, locations, relations, comparison facts, bridge facts, and evidence-bearing sentences."
+    elif dataset == "narrativeqa":
+        source_name = "NarrativeQA long-document QA"
+        source_label = "DOCUMENT CHUNK"
+        guidance = "Preserve characters, events, motivations, causal links, temporal order, locations, and quoted or near-quoted evidence."
+    else:
+        source_name = f"{dataset} QA"
+        source_label = "SOURCE CHUNK"
+        guidance = "Preserve facts that may help answer future questions."
+
+    common = f"""You are constructing a long-term memory for {source_name}.
+Keep facts that may help answer future questions. {guidance}
 Return concise bullet lines only. Do not answer any question.
 
-SESSION HEADER:
-{session_header}
+SOURCE HEADER:
+{chunk_header}
 
-DIALOGUE:
-{session_text}
+{source_label}:
+{chunk_text}
 """
     if method == "mem0":
         return common + "\nExtract atomic user/assistant memories, one fact per bullet."
@@ -95,6 +111,7 @@ that are useful for future QA. Do not invent facts."""
 
 def build_memories(
     method: str,
+    spec: DatasetSpec,
     sample: Sample,
     outdir: Path,
     generator: CachedOpenAIGenerator,
@@ -107,9 +124,9 @@ def build_memories(
         return json.loads(path.read_text(encoding="utf-8"))
 
     memories: List[Dict[str, Any]] = []
-    for idx, chunk in enumerate(sample.chunks):
+    for idx, chunk in enumerate(materialise_chunks(sample)):
         header, body = _strip_session_header(chunk)
-        prompt = _memory_prompt(method, header, body)
+        prompt = _memory_prompt(method, spec.name, header, body)
         out = generator.generate_single(prompt=prompt)
         lines = _clean_lines(out.get("text") or "")
         for j, line in enumerate(lines):
@@ -131,6 +148,7 @@ def build_memories(
                     "content": content,
                     "session": idx,
                     "session_header": header,
+                    "dataset": spec.name,
                     "method": method,
                     "op": op,
                 }
@@ -227,7 +245,7 @@ def run_sample(
     rebuild: bool,
     workers: int,
 ) -> Dict[str, Any]:
-    memories = build_memories(method, sample, outdir, memory_generator, rebuild)
+    memories = build_memories(method, spec, sample, outdir, memory_generator, rebuild)
     texts = [m["content"] for m in memories]
     matrix = embedder.embed(texts) if texts and retrieval in ("dense", "hybrid") else None
 
@@ -277,12 +295,41 @@ def run_sample(
     }
 
 
+def load_spec(args: argparse.Namespace) -> DatasetSpec:
+    loader = LOADERS[args.dataset]
+    if args.dataset == "hotpotqa":
+        return loader(split=args.split, max_tokens=args.max_tokens)
+    if args.dataset == "narrativeqa":
+        return loader(max_tokens=args.max_tokens)
+    return loader(max_tokens=args.max_tokens)
+
+
+def select_samples(args: argparse.Namespace, spec: DatasetSpec) -> List[Sample]:
+    samples = spec.samples
+    if args.only:
+        keep = set(args.only)
+        samples = [s for s in samples if s.sample_id in keep]
+    if args.dataset in ("hotpotqa", "narrativeqa") and args.limit_samples:
+        rng = random.Random(args.seed)
+        samples = rng.sample(samples, min(args.limit_samples, len(samples)))
+    elif args.limit_samples:
+        rng = random.Random(args.seed)
+        samples = rng.sample(samples, min(args.limit_samples, len(samples)))
+    if args.limit_questions:
+        for sample in samples:
+            sample.qas = sample.qas[: args.limit_questions]
+    return samples
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--dataset", default="locomo", choices=sorted(LOADERS))
+    p.add_argument("--split", default="eval_400")
     p.add_argument("--method", required=True, choices=["mem0", "amem", "memoryos", "lightmem", "memoryr1"])
     p.add_argument("--model", default="gpt-4o-mini")
     p.add_argument("--embed-model", default="text-embedding-3-small")
     p.add_argument("--temperature", type=float, default=0.3)
+    p.add_argument("--max-tokens", type=int, default=2048)
     p.add_argument("--top-k", type=int, default=10)
     p.add_argument("--retrieval", choices=["dense", "bm25", "hybrid"], default="hybrid")
     p.add_argument("--only", nargs="*", default=None)
@@ -296,27 +343,19 @@ def main() -> int:
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()
 
-    spec = LOADERS["locomo"]()
-    samples = spec.samples
-    if args.only:
-        keep = set(args.only)
-        samples = [s for s in samples if s.sample_id in keep]
-    if args.limit_samples:
-        rng = random.Random(args.seed)
-        samples = rng.sample(samples, min(args.limit_samples, len(samples)))
-    if args.limit_questions:
-        for sample in samples:
-            sample.qas = sample.qas[: args.limit_questions]
+    spec = load_spec(args)
+    samples = select_samples(args, spec)
 
-    tag = args.tag or f"{args.method}-locomo-4omini-full-no26"
+    tag = args.tag or f"{args.method}-{spec.name}-{args.model}"
     outdir = RESULTS / tag
     outdir.mkdir(parents=True, exist_ok=True)
     n_q = sum(len(s.qas) for s in samples)
-    print(f"dataset=locomo method={args.method} model={args.model}")
+    print(f"dataset={spec.name} method={args.method} model={args.model}")
     print(f"samples={len(samples)} questions={n_q} outdir={outdir}")
     if args.dry_run:
         for s in samples[:3]:
-            print(f"  {s.sample_id}: {len(s.chunks)} sessions, {len(s.qas)} questions")
+            chunks = materialise_chunks(s)
+            print(f"  {s.sample_id}: {len(chunks)} chunks, {len(s.qas)} questions")
         return 0
 
     memory_generator = CachedOpenAIGenerator(
@@ -373,6 +412,7 @@ def main() -> int:
         "dataset": spec.name,
         "method": args.method,
         "protocol": "api_only_structured_memory_reproduction",
+        "note": "Matched-backbone reproduction of external structured-memory baselines; not the official external training/runtime stack.",
         "model": args.model,
         "temperature": args.temperature,
         "top_k": args.top_k,

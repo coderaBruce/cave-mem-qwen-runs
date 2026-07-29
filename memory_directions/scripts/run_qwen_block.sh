@@ -13,8 +13,11 @@ set -euo pipefail
 #   locomo-core       Static RAG + GAM + R2Mem + CAVE-Mem on LoCoMo
 #   hotpot-core       Static RAG + GAM + R2Mem + CAVE-Mem on HotpotQA eval_400
 #   nqa-core          Static RAG + GAM + R2Mem + CAVE-Mem on NarrativeQA 300
-#   locomo-extra      LoCoMo-only reproduced memory baselines
+#   locomo-extra      Mem0/A-Mem/MemoryOS/LightMem/MemoryR1 on LoCoMo
+#   hotpot-extra      Mem0/A-Mem/MemoryOS/LightMem/MemoryR1 on HotpotQA
+#   nqa-extra         Mem0/A-Mem/MemoryOS/LightMem/MemoryR1 on NarrativeQA
 #   all-core          locomo-core + hotpot-core + nqa-core
+#   all-extra         locomo-extra + hotpot-extra + nqa-extra
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
@@ -144,12 +147,40 @@ run_nqa_core() {
 run_locomo_extra() {
   for method in mem0 amem memoryos lightmem memoryr1; do
     (cd r2m-api && "$PY_ABS" run_memory_baselines.py \
+      --dataset locomo \
       --method "$method" \
       --model "$MODEL_NAME" \
       --embed-model "$EMBED_MODEL" \
       --workers "$WORKERS" \
       --only "${LOCOMO_EVAL[@]}" \
       --tag "${method}-locomo-${RUN_PREFIX}-full-no26")
+  done
+}
+
+run_hotpot_extra() {
+  for method in mem0 amem memoryos lightmem memoryr1; do
+    (cd r2m-api && "$PY_ABS" run_memory_baselines.py \
+      --dataset hotpotqa \
+      --split eval_400 \
+      --method "$method" \
+      --model "$MODEL_NAME" \
+      --embed-model "$EMBED_MODEL" \
+      --workers "$WORKERS" \
+      --tag "${method}-hotpot400-${RUN_PREFIX}")
+  done
+}
+
+run_nqa_extra() {
+  for method in mem0 amem memoryos lightmem memoryr1; do
+    (cd r2m-api && "$PY_ABS" run_memory_baselines.py \
+      --dataset narrativeqa \
+      --method "$method" \
+      --model "$MODEL_NAME" \
+      --embed-model "$EMBED_MODEL" \
+      --workers "$WORKERS" \
+      --limit-samples 300 \
+      --seed 42 \
+      --tag "${method}-nqa300-${RUN_PREFIX}")
   done
 }
 
@@ -178,10 +209,21 @@ case "$BLOCK" in
   locomo-extra|extra)
     run_locomo_extra
     ;;
+  hotpot-extra)
+    run_hotpot_extra
+    ;;
+  nqa-extra|narrative-extra)
+    run_nqa_extra
+    ;;
   all-core)
     run_locomo_core
     run_hotpot_core
     run_nqa_core
+    ;;
+  all-extra)
+    run_locomo_extra
+    run_hotpot_extra
+    run_nqa_extra
     ;;
   *)
     echo "Unknown BLOCK=$BLOCK" >&2

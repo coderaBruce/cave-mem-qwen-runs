@@ -252,11 +252,15 @@ bash memory_directions/scripts/run_qwen3b_nqa.sh
 ```
 
 The core blocks evaluate Static RAG, GAM, R2Mem, and CAVE-Mem on the matched
-dataset split. Optional LoCoMo-only reproduced memory baselines are separate:
+dataset split. The reproduced structured-memory baselines are separate blocks:
 
 ```bash
 bash memory_directions/scripts/run_qwen7b_locomo_extra.sh
+bash memory_directions/scripts/run_qwen7b_hotpot_extra.sh
+bash memory_directions/scripts/run_qwen7b_nqa_extra.sh
 bash memory_directions/scripts/run_qwen3b_locomo_extra.sh
+bash memory_directions/scripts/run_qwen3b_hotpot_extra.sh
+bash memory_directions/scripts/run_qwen3b_nqa_extra.sh
 ```
 
 Each block mirrors completed summaries and artifacts into
