@@ -63,6 +63,11 @@ echo "Using environment Python: $("$PY" --version 2>&1)"
   openai anthropic numpy tqdm tiktoken rank_bm25 python-dotenv google-genai \
   pyarrow pydantic sentence-transformers
 
+# Some recent dependency stacks pull torchcodec wheels built for CUDA 13.
+# This project is text-only; keeping torchcodec can make transformers/
+# sentence-transformers fail on CUDA 12.8 machines with libnvrtc.so.13 errors.
+"$PY" -m pip uninstall -y torchcodec || true
+
 if [[ "$INSTALL_VLLM" == "1" ]]; then
   echo "Installing PyTorch from $PYTORCH_INDEX_URL"
   "$PY" -m pip uninstall -y torch torchvision torchaudio vllm || true
